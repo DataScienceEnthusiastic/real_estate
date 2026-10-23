@@ -1,0 +1,5 @@
+# Start with a small research sample. Add URLs only for pages you intend to collect.
+# Area page (will discover a limited number of project links only when --discover-project-links is used):
+https://flatnama.com/pune/deccan/
+# Known project detail example:
+https://flatnama.com/pune/p52100050860-state-bank-of-india-employees-himgauri-co-operative-housing-society-ltd/

@@ -1,0 +1,21 @@
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: pune_property_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: pune_property
+      POSTGRES_USER: property_user
+      POSTGRES_PASSWORD: change_me
+    ports:
+      - "5432:5432"
+    volumes:
+      - pune_property_pgdata:/var/lib/postgresql/data
+      - ./schema.sql:/docker-entrypoint-initdb.d/001_schema.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U property_user -d pune_property"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+volumes:
+  pune_property_pgdata:
