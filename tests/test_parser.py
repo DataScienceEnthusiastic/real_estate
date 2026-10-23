@@ -182,9 +182,20 @@ class ParserTests(unittest.TestCase):
         self.assertEqual(d["units_2bhk"], 50)
         self.assertEqual(d["units_3bhk"], 20)
         self.assertEqual(d["total_residential_units"], 80)
-        self.assertTrue(len(d["faqs"]) >= 5)
-        self.assertTrue(any("possession" in f["question"].lower() for f in d["faqs"]))
-        self.assertTrue(any("construction" in f["question"].lower() for f in d["faqs"]))
+        # Verify genuine FAQs only (not synthetically fabricated when absent)
+        self.assertEqual(d["faqs"], [])
+
+    def test_genuine_source_faqs_extracted_when_present(self):
+        from bs4 import BeautifulSoup
+        from scraper import extract_source_faqs
+        html = """<div class="faq-section">
+            <details class="faq-item"><summary>What are the society maintenance charges?</summary><p>Maintenance is ₹3.50 per sq ft monthly.</p></details>
+        </div>"""
+        soup = BeautifulSoup(html, "html.parser")
+        faqs = extract_source_faqs(soup)
+        self.assertEqual(len(faqs), 1)
+        self.assertIn("maintenance", faqs[0]["question"].lower())
+        self.assertFalse(faqs[0]["is_synthesized"])
 
     def test_progress_deltas_computation(self):
         from scraper import compute_progress_deltas

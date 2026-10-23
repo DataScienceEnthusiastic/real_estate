@@ -51,7 +51,7 @@ def export_from_json(json_path: Path, output_dir: Path) -> dict[str, int]:
             "rera_number": get_val(p, "rera_number"),
             "phase_name": get_val(p, "phase_name"),
             "developer": get_val(p, "developer"),
-            "project_type": get_val(p, "project_type", "Residential"),
+            "project_type": get_val(p, "project_type"),
             "locality": get_val(p, "locality"),
             "sub_locality": get_val(p, "sub_locality"),
             "city": get_val(p, "city", "Pune"),
@@ -73,15 +73,15 @@ def export_from_json(json_path: Path, output_dir: Path) -> dict[str, int]:
             "promised_timeline_months": get_val(p, "promised_timeline_months"),
             "months_elapsed_since_launch": get_val(p, "months_elapsed_since_launch"),
             "months_remaining_to_possession": get_val(p, "months_remaining_to_possession"),
-            "ready_to_move_status": get_val(p, "ready_to_move_status", False),
-            "structural_completion_status": get_val(p, "structural_completion_status", False),
-            "finishing_completion_status": get_val(p, "finishing_completion_status", False),
+            "ready_to_move_status": get_val(p, "ready_to_move_status"),
+            "structural_completion_status": get_val(p, "structural_completion_status"),
+            "finishing_completion_status": get_val(p, "finishing_completion_status"),
             "building_count": get_val(p, "building_count"),
             "land_acres": get_val(p, "land_acres"),
             "excavation_pct": get_val(p, "excavation_pct"),
             "rcc_pct": get_val(p, "rcc_pct"),
             "finishing_pct": get_val(p, "finishing_pct"),
-            "complaint_count": get_val(p, "complaint_count", 0),
+            "complaint_count": get_val(p, "complaint_count"),
             "total_units": get_val(p, "total_units"),
             "units_for_sale": get_val(p, "units_for_sale"),
             "units_booked": get_val(p, "units_booked"),
@@ -319,12 +319,59 @@ def export_from_json(json_path: Path, output_dir: Path) -> dict[str, int]:
         # Summarize sizes: "700–800 sq ft (₹70–90 lakh)"
         sizes_str = " | ".join(f"{item.get('raw_size_label')} ({item.get('raw_price_label')})" for item in p.get("size_price_bands", []))
         c_row["size_price_summary"] = sizes_str
-        # Summarize progress: "Dec 2025: RCC 100%, Finishes 40%"
         progress_str = " | ".join(f"{item.get('update_label')}: RCC {item.get('rcc_pct')}%, Finishes {item.get('finishing_pct')}%" for item in p.get("progress_updates", []))
         c_row["latest_progress_summary"] = progress_str
         complete_rows.append(c_row)
     _write_csv(output_dir / "projects_complete.csv", complete_rows)
     counts["projects_complete.csv"] = len(complete_rows)
+
+    # 13. investment_h1_cashflows.csv (Financial DCF model for H1)
+    from financial_model import evaluate_investment_h1, evaluate_project_value_h3
+    h1_rows = []
+    h3_rows = []
+    for p in projects:
+        rate = p.get("price_per_sqft_80pct") or p.get("headline_price_per_sqft_80pct")
+        if rate:
+            price = rate * 1000.0  # 1000 sq ft unit benchmark
+            h1_res = evaluate_investment_h1(price, holding_years=10)
+            h1_rows.append({
+                "project_key": p.get("rera_number") or p.get("project_url", ""),
+                "project_name": p.get("project_name", ""),
+                "locality": p.get("locality", ""),
+                "purchase_price": price,
+                "total_acquisition_cost": h1_res["total_acquisition_cost"],
+                "initial_equity_invested": h1_res["initial_equity_invested"],
+                "monthly_emi": h1_res["monthly_emi"],
+                "gross_rental_yield_pct": h1_res["gross_rental_yield_pct"],
+                "net_rental_yield_pct": h1_res["net_rental_yield_pct"],
+                "nominal_irr_pct": h1_res["nominal_irr_pct"],
+                "real_irr_pct": h1_res["real_irr_pct"],
+                "npv_at_9pct_inr": h1_res["npv_at_9pct_inr"],
+                "alternative_nifty50_terminal_equity": h1_res["alternative_nifty50_terminal_equity"],
+                "alternative_fd_terminal_equity": h1_res["alternative_fd_terminal_equity"],
+                "property_vs_nifty50_delta_inr": h1_res["property_vs_nifty50_delta_inr"],
+                "is_property_financially_superior_to_equity": h1_res["is_property_financially_superior_to_equity"],
+            })
+            val_res = evaluate_project_value_h3(
+                subject_rate_sqft=rate,
+                locality_median_rate_sqft=18000.0,
+                possession_delay_months=p.get("possession_extension_months"),
+                rcc_pct=p.get("rcc_pct"),
+                complaint_count=p.get("complaint_count"),
+            )
+            h3_rows.append({
+                "project_key": p.get("rera_number") or p.get("project_url", ""),
+                "project_name": p.get("project_name", ""),
+                "locality": p.get("locality", ""),
+                "subject_rate_sqft": rate,
+                "value_category": val_res["value_category"],
+                "price_diff_vs_locality_pct": val_res["price_diff_vs_locality_pct"],
+                "value_score": val_res["value_score"],
+            })
+    _write_csv(output_dir / "investment_h1_cashflows.csv", h1_rows)
+    counts["investment_h1_cashflows.csv"] = len(h1_rows)
+    _write_csv(output_dir / "project_h3_value_scores.csv", h3_rows)
+    counts["project_h3_value_scores.csv"] = len(h3_rows)
 
     return counts
 
@@ -351,6 +398,12 @@ def export_from_db(dsn: str, output_dir: Path) -> dict[str, int]:
                 "comparison_benchmarks.csv": "SELECT * FROM project_comparison_benchmarks",
                 "faqs.csv": "SELECT * FROM v_project_faqs_overview",
                 "quality_audits.csv": "SELECT * FROM project_quality_audits",
+                "investment_h1_cashflows.csv": "SELECT * FROM v_investment_h1_cashflows",
+                "locality_h2_rankings.csv": "SELECT * FROM v_locality_h2_rankings",
+                "project_h3_value_scores.csv": "SELECT * FROM v_project_h3_value_scores",
+                "hedonic_h4_dataset.csv": "SELECT * FROM v_hedonic_h4_dataset",
+                "financial_assumptions.csv": "SELECT * FROM financial_assumptions",
+                "locations.csv": "SELECT * FROM locations",
             }
 
             for filename, query in queries.items():

@@ -1,35 +1,33 @@
-# FlatNama → PostgreSQL & CSV Collector (v0.6.0)
+# Pune Real Estate Investment Intelligence Platform (v0.7.0)
 
-An advanced, polite research collector for extracting structured real estate data from [FlatNama](https://flatnama.com) into **PostgreSQL** and **CSV spreadsheets**.
+An evidence-backed real estate investment data and decision platform for **Pune, Maharashtra, India**. 
 
-It captures an exhaustive set of project features across **16 structured data categories**, computes exact timeline/possession metrics and construction progress deltas, generates project FAQs, creates relational tables with analytical views, and exports clean Excel-ready CSV files.
-
----
-
-## The 16 Extraction Categories
-
-1. **Project Identity**: Project name, MahaRERA ID, phase/wing name, canonical URL, developer, category/type (Residential/Commercial/Mixed), description, breadcrumbs, registration status.
-2. **Geographic & Location Data**: Area/locality, sub-locality, city, district, 6-digit PIN code, Google Maps link, displayed address, area catalogue URL.
-3. **Launch, Completion & Possession**: Launch month & year, promised timeline in months, registered possession target, original possession target, possession extension status (`Extended` / `On Schedule`), delay in months, months elapsed since launch, months remaining, ready-to-move status.
-4. **Construction & Physical Progress**: Buildings count, land area in acres, excavation %, RCC %, final finishes %, construction stage, structural completion status, finishing completion status, complaints count, chronological progress updates with delta changes.
-5. **Inventory & Flat Configuration**: Total registered units, units for sale, units booked, not for sale units, booking %, booking status, recent bookings count, and flat mix breakdown (`1 RK`, `1 BHK`, `2 BHK`, `3 BHK`, `4 BHK`, `5+ BHK`, `Other`).
-6. **Actual Sold-Price Summaries**: 80th-percentile rate per sq ft, latest sales year, transaction count, current year-to-date rate (`YYYY so far`), previous year rate, YoY change %, YoY direction (`up`/`down`/`stable`), rate vs nearby projects premium/discount %, price area basis.
-7. **Size-Wise Pricing Bands**: Flat size ranges (sq ft), observed buyer price brackets (INR Lakh/Crore), min/max size and price bounds.
-8. **Historical Project Updates**: Detailed milestone table with excavation, RCC, finishes, bookings, and delta change calculations between consecutive updates.
-9. **Similar-Project Comparisons**: Benchmark group size, benchmark PIN code, and individual comparable projects with launch, possession, RCC, and bookings.
-10. **Price & Market Benchmark Indicators**: Key measure comparisons (promised timeline, possession extensions, possession date, RCC complete %, share of units booked, complaints).
-11. **Frequently Asked Questions & Explanatory Content**: Synthesized and extracted Q&As covering possession dates, construction status, pricing, inventory, developer background, and 80%-threshold definitions.
-12. **Area & Listing-Page Data**: Area name, PIN code, total listed projects, visible projects, small projects hidden behind filters, recent 6-month launches, RCC complete count, extended possession count, nearby areas.
-13. **Pune Market Analytics**: Area-by-year macro trends (launches, units, structural completion).
-14. **Related Projects & Navigation**: Other phases of the same development, comparable project links, area navigation links, map links.
-15. **Raw HTML & Technical Metadata**: Technical DOM inventory (meta tags, OpenGraph tags, canonical URL, headings, tables, lists, key-values, links, images metadata).
-16. **Provenance & Data Quality**: Parser version, field presence score, completeness percentage, and detailed QA audit warnings.
+The platform collects data from FlatNama, listing portals, and official statutory sources (MahaRERA / IGR Maharashtra) into **PostgreSQL**, applies transactional migrations, validates data quality, performs entity resolution, and runs financial planning calculations (DCF, IRR, NPV, mortgage amortization, scenario analysis) to address core investment hypotheses.
 
 ---
 
-## Quickstart
+## 1. Investment Hypotheses Supported
 
-### 1. Environment Setup
+- **H1: Financial Attractiveness of Residential Property in Pune**: Evaluates whether purchasing residential property in Pune is financially justified vs capital alternatives (Nifty 50 equity index compounding @ 12% and Bank Fixed Deposits @ 7%). Computes nominal and inflation-adjusted (real) IRR, exit equity, and net cash flows over 5, 10, and 15-year holding horizons under Bear, Base, and Bull scenarios, accounting for Finance Act 2024 LTCG tax (flat 12.5% under Section 112) and Section 24(b) interest deductions.
+- **H2: Locality Investment Ranking**: Ranks Pune micro-markets using a multi-factor score (0–100) combining 3-year registered price growth, net rental yields, project delay and execution risk, pipeline absorption rates, and transit proximity to IT corridors (Hinjawadi, Kharadi, Magarpatta) and Pune Metro Line 3.
+- **H3: Project and Individual Flat Value Evaluation**: Identifies properties whose asking or registered rates offer attractive value relative to micro-market peer benchmarks, while adjusting for developer delay history and finishing progress.
+- **H4: Explainable Hedonic Price Modeling Dataset**: Prepares a leak-free modeling dataset for regression and machine learning (e.g. XGBoost, Random Forest) using strict out-of-time splits and historical infrastructure opening dates to prevent temporal lookahead bias.
+
+---
+
+## 2. Architecture & Design Principles
+
+1. **Strict Entity Separation**: Asking prices (`property_listings`), statutory registered deeds (`registered_transactions`), and project-level annual benchmarks (`project_sale_year_stats`) are stored in distinct tables. FlatNama's 80th-percentile project benchmark is never labeled as an individual flat transaction price.
+2. **Honest Missing-Data Semantics**: Unknown fields remain `NULL`. The platform never injects default values (e.g. `Residential`, `Active`, `On Schedule`, `0`, or `False`) when the source is silent.
+3. **No Synthetic Content**: Replaced synthetic FAQ generators with an authentic schema.org and HTML accordion FAQ extractor.
+4. **Reprocessable Snapshots**: Snapshot uniqueness constraint is enforced as `UNIQUE (project_key, content_sha256, parser_version)`. Bumping the parser version re-processes existing HTML snapshots without manual database truncation.
+5. **Versioned Database Migrations**: Schema updates are managed via versioned SQL migrations (`migrations/001_initial_baseline.sql`, `002_investment_entities.sql`, `003_analytical_investment_views.sql`) tracked in `schema_migrations`.
+
+---
+
+## 3. Quickstart
+
+### 3.1 Setup Environment
 
 ```powershell
 # Activate virtual environment
@@ -39,77 +37,104 @@ It captures an exhaustive set of project features across **16 structured data ca
 pip install -r requirements.txt
 ```
 
-Verify your [.env](file:///u:/Projects_/real_estate/.env) has your contact email in `FLATNAMA_USER_AGENT` and your database credentials in `DATABASE_URL`.
-
-### 2. Start PostgreSQL (Docker)
-
-```powershell
-docker compose up -d db
+Verify your `.env` configuration contains your database credentials:
+```env
+FLATNAMA_USER_AGENT=researcher/0.1 (contact: your_email@example.com)
+DATABASE_URL=postgresql://uday:1234@localhost:5432/pune_property
 ```
 
-Tables, indexes, and analytical views will initialize automatically via [schema.sql](file:///u:/Projects_/real_estate/schema.sql).
+### 3.2 Run Database Migrations
 
-### 3. Run Parser Unit Tests
-
+Apply all versioned database migrations idempotently:
 ```powershell
-python -m unittest discover -s tests -v
+python migrate.py
 ```
 
----
+### 3.3 Import Research Data (Offline / Pre-collected)
 
-## Running the Scraper
-
-### Sample Run with QA Report and CSV Export
-
+Import existing research reports (such as `reports/deccan_sample_v3.json`) directly into PostgreSQL without making network requests:
 ```powershell
+python import_report.py reports\deccan_sample_v3.json
+```
+
+### 3.4 Run Scraper Collection
+
+Run the polite FlatNama collector:
+```powershell
+# Scrape sample projects and generate a QA report
 python scraper.py --input seed_urls.txt --discover-project-links --max-project-pages 10 --report-json reports\deccan_sample_v3.json --export-csv exports
+
+# Or run in dry-run mode (skips database writes)
+python scraper.py --input seed_urls.txt --discover-project-links --max-project-pages 5 --dry-run
 ```
 
-To run without writing to PostgreSQL (dry run):
+### 3.5 Run the Financial & Investment Valuation Engine
+
+Run the financial model CLI to evaluate investment scenarios:
 ```powershell
-python scraper.py --input seed_urls.txt --discover-project-links --max-project-pages 10 --dry-run --report-json reports\deccan_sample_v3.json --export-csv exports
+python financial_model.py
 ```
+This prints the 5, 10, and 15-year DCF cash flow schedules, debt amortization, nominal vs real IRR, and Bear/Base/Bull scenario comparisons.
 
----
+### 3.6 Export CSV Spreadsheets
 
-## Exporting CSV Spreadsheets
-
-You can export the entire scraped dataset at any time using [export_data.py](file:///u:/Projects_/real_estate/export_data.py):
-
+Export all 18 analytical tables and views into Excel-ready UTF-8 (with BOM) CSV files:
 ```powershell
-# Export from a JSON report file
-python export_data.py --json reports\deccan_sample_v3.json --output-dir exports
-
-# Or export directly from live PostgreSQL database
 python export_data.py --db --output-dir exports
 ```
 
-### Generated CSV Files in `exports/`:
-- `projects_master.csv`: Wide master table with 69 structured columns per project.
-- `projects_complete.csv`: Single all-in-one spreadsheet with flattened unit mix, price history, and progress summaries.
-- `sale_prices.csv`: All year-by-year 80th-percentile price records and sales counts.
-- `progress_updates.csv`: All historical construction milestones with progress deltas.
-- `unit_mix.csv`: Unit configurations (`1 RK` through `5+ BHK`).
-- `size_price_bands.csv`: Size ranges and buyer price brackets.
-- `comparables.csv`: Specific comparable projects.
-- `comparison_benchmarks.csv`: Benchmarks comparing project to similar peers.
-- `faqs.csv`: Project-specific FAQs and explanatory notes.
-- `related_links.csv`: Other phases and navigation links.
-- `area_summaries.csv`: Area catalog counts, hidden project counts, and filters.
-- `quality_audits.csv`: Extraction completeness scores, warnings, and missing fields.
+---
 
-All CSVs are encoded in **UTF-8 with BOM** (`utf-8-sig`) so that symbols like `₹` and special formatting open seamlessly in Microsoft Excel, Google Sheets, and Pandas.
+## 4. Test Suite Execution
+
+Run the complete automated test suite (37 unit, regression, and database integration tests):
+
+```powershell
+.\.venv\Scripts\python.exe -m unittest discover tests -v
+```
+
+### Verified Test Modules:
+- `tests/test_parser.py`: 12 tests verifying multi-row annual price extraction, year-over-year text matching, layout shifts, missing values, and authentic FAQ extraction.
+- `tests/test_financial_model.py`: 11 tests verifying acquisition closing costs, monthly EMI schedules, rental yields, IRR/NPV, and H1/H2/H3 scoring.
+- `tests/test_entity_resolution.py`: 4 tests verifying multi-tiered record matching (exact RERA ID, exact name & locality, fuzzy Jaccard similarity, and unresolved preservation).
+- `tests/test_data_quality.py`: 6 tests verifying range bounds, chronological consistency (possession >= launch), price boundaries, and unobserved boolean audits.
+- `tests/test_integration.py`: 4 tests verifying database connectivity, migration idempotency, view queries, repeat-import idempotency, and CSV exports.
 
 ---
 
-## PostgreSQL Views & Queries
+## 5. Analytical SQL Views
 
-The database provides pre-built analytical views for immediate inspection:
-- `v_projects_master`: High-level master overview of all projects.
-- `v_project_delays_and_progress`: Focus on timelines, delays in months, and structural stages.
-- `v_project_pricing_summary`: Latest 80%-threshold rate, YoY price growth, and market comparisons.
-- `v_project_inventory_summary`: Inventory breakdown, units booked, and flat types.
-- `v_project_comparables_summary`: Project vs similar project benchmarks.
-- `v_project_faqs_overview`: Questions and verified answers per project.
+| View Name | Primary Function | Hypotheses |
+|---|---|---|
+| `v_investment_h1_cashflows` | Pre-computes 5, 10, 15-year cash flows, mortgage EMI, net operating income, and exit equity. | **H1** |
+| `v_locality_h2_rankings` | Locality-level ranking combining price growth, rental yield, delay rates, absorption %, and transit proximity. | **H2** |
+| `v_project_h3_value_scores` | Relative pricing, micro-market discounts, execution progress, and value opportunity score per project. | **H3** |
+| `v_hedonic_h4_dataset` | Clean, leakage-free modeling dataset prepared for out-of-time train/test evaluation. | **H4** |
+| `v_projects_master` | Master view with 60+ verified entity attributes and quality flags. | Master Data |
+| `v_project_delays_and_progress` | Detailed possession extension timelines, delay in months, and RCC/finishing stages. | Execution Risk |
+| `v_project_pricing_summary` | Annual price benchmarks, YoY growth, rate vs nearby projects, and volume. | Valuation |
+| `v_project_inventory_summary` | Inventory distribution, sold counts, booking %, and BHK configurations. | Absorption |
 
-Ready-to-run SQL queries are provided in [queries.sql](file:///u:/Projects_/real_estate/queries.sql).
+---
+
+## 6. Generated CSV Files (`exports/`)
+
+Running `python export_data.py --db --output-dir exports` creates:
+1. `investment_h1_cashflows.csv`
+2. `locality_h2_rankings.csv`
+3. `project_h3_value_scores.csv`
+4. `hedonic_h4_dataset.csv`
+5. `projects_master.csv`
+6. `delays_and_progress.csv`
+7. `pricing_summary.csv`
+8. `inventory_summary.csv`
+9. `sale_prices.csv`
+10. `progress_updates.csv`
+11. `unit_mix.csv`
+12. `size_price_bands.csv`
+13. `comparables.csv`
+14. `comparison_benchmarks.csv`
+15. `faqs.csv`
+16. `quality_audits.csv`
+17. `financial_assumptions.csv`
+18. `locations.csv`

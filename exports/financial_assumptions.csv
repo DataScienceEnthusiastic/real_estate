@@ -1,0 +1,4 @@
+﻿assumption_id,scenario_name,down_payment_pct,loan_tenure_years,loan_interest_rate_pct,brokerage_purchase_pct,brokerage_resale_pct,legal_due_diligence_inr,vacancy_rate_pct,annual_rent_growth_pct,annual_appreciation_pct,society_maintenance_sqft_pm,annual_property_tax_pct,discount_rate_wacc_pct,opportunity_equity_cagr_pct,opportunity_debt_cagr_pct
+base_case,Base Case (Moderate),20.00,20,8.50,1.00,2.00,35000.00,8.33,5.00,6.00,3.50,0.20,9.00,11.50,7.00
+bear_case,Bear Case (Conservative Stagnation),20.00,20,9.50,1.00,2.00,35000.00,16.67,2.50,3.00,3.50,0.20,9.00,11.50,7.00
+bull_case,Bull Case (High Growth Corridor),20.00,20,8.00,1.00,2.00,35000.00,4.00,7.00,9.00,3.50,0.20,9.00,11.50,7.00

@@ -27,7 +27,7 @@ import requests
 from bs4 import BeautifulSoup
 from dotenv import load_dotenv
 
-PARSER_VERSION = "0.6.0"
+PARSER_VERSION = "0.7.0"
 BASE_HOSTS = {"flatnama.com", "www.flatnama.com"}
 PROJECT_SLUG_RE = re.compile(r"^/(?:pune/)(?P<rera>(?:p\d{8,}|p[rmcp]\d{7,}|pr\d{7,}|pm\d{7,}|pc\d{7,}|pp\d{7,}))-[^/]+/?$", re.I)
 RERA_RE = re.compile(r"\b(?:P\d{9,}|PR\d{8,}|PM\d{8,}|PC\d{8,}|PP\d{8,})\b", re.I)
@@ -115,13 +115,15 @@ def extract_phase_name(name: str | None) -> str | None:
     return None
 
 
-def extract_project_type(name: str | None, flat_text: str) -> str:
+def extract_project_type(name: str | None, flat_text: str) -> str | None:
     combined = f"{name or ''} {flat_text}".lower()
     if "residential and commercial" in combined or "mixed use" in combined:
         return "Mixed Use"
     if "business zone" in combined or "commercial" in combined or "tech park" in combined or "office space" in combined:
         return "Commercial"
-    return "Residential"
+    if "residential" in combined or "apartment" in combined or "flat" in combined or "bhk" in combined:
+        return "Residential"
+    return None
 
 
 def aggregate_unit_mix(unit_mix: list[dict[str, Any]]) -> dict[str, int]:
@@ -191,76 +193,31 @@ def extract_breadcrumbs(soup: BeautifulSoup, page_url: str, project_name: str | 
     return crumbs
 
 
-def generate_project_faqs(p: dict[str, Any]) -> list[dict[str, str]]:
+def extract_source_faqs(soup: BeautifulSoup) -> list[dict[str, Any]]:
+    """Extracts only genuine source-published FAQs from HTML or JSON-LD schema.org/FAQPage."""
     faqs = []
-    name = p.get("project_name") or "This project"
-    rera = p.get("rera_number")
-    dev = p.get("developer") or "the promoter"
-    locality = p.get("locality") or "Pune"
+    # 1. Parse JSON-LD FAQPage if present
+    for script in soup.find_all("script", type="application/ld+json"):
+        try:
+            payload = json.loads(script.string or "")
+            if isinstance(payload, dict) and payload.get("@type") == "FAQPage":
+                for item in payload.get("mainEntity", []):
+                    q = clean_text(item.get("name"))
+                    ans = clean_text(item.get("acceptedAnswer", {}).get("text"))
+                    if q and ans:
+                        faqs.append({"topic": "Source FAQ", "question": q, "answer": ans, "is_synthesized": False})
+        except Exception:
+            continue
 
-    # 1. Possession & Timeline
-    poss_date = p.get("possession_date_text") or "Not disclosed"
-    ext_note = p.get("possession_extension_note") or ""
-    delay = p.get("possession_delay_months")
-    delay_str = f" The registered possession date was extended by {delay} months." if delay else (" " + ext_note if ext_note else " The project is registered under its promised completion timeline.")
-    faqs.append({
-        "topic": "Possession & Timeline",
-        "question": f"What is the registered possession date for {name}?",
-        "answer": f"The registered possession date reported to MahaRERA is {poss_date}.{delay_str}"
-    })
-
-    # 2. Construction Stage & Progress
-    stage = p.get("construction_stage") or "In Progress"
-    rcc = p.get("rcc_pct")
-    rcc_str = f"{rcc}%" if rcc is not None else "not disclosed"
-    fin = p.get("finishing_pct")
-    fin_str = f"{fin}%" if fin is not None else "not disclosed"
-    faqs.append({
-        "topic": "Construction Status",
-        "question": f"What is the construction status of {name}?",
-        "answer": f"{name} is currently categorized as '{stage}'. Concrete structural work (RCC) is {rcc_str} complete and final finishes are {fin_str} complete."
-    })
-
-    # 3. Sold Price & Rate per Sq Ft
-    rate = p.get("price_per_sqft_80pct")
-    yr = p.get("latest_sale_year")
-    basis = p.get("price_area_basis") or "carpet area"
-    comp_diff = p.get("rate_vs_nearby_projects_pct")
-    comp_str = f" This rate is approximately {abs(comp_diff):.0f}% {'higher' if comp_diff > 0 else 'lower'} than nearby comparable projects." if comp_diff is not None else ""
-    if rate:
-        faqs.append({
-            "topic": "Pricing & Sold Rates",
-            "question": f"What is the price per square foot for {name} in {locality}?",
-            "answer": f"The project's 80th-percentile sold price for {yr or 'recent sales'} was ₹{rate:,.0f} per sq ft ({basis}), based on registered sales records.{comp_str}"
-        })
-
-    # 4. Inventory & Units Booked
-    total = p.get("total_units")
-    booked = p.get("units_booked")
-    pct = p.get("booking_pct")
-    if total is not None:
-        booked_str = f"{booked} units booked ({pct}% booked)" if booked is not None else "booking count not reported"
-        faqs.append({
-            "topic": "Inventory & Bookings",
-            "question": f"How many units are booked in {name}?",
-            "answer": f"{name} has {total} total registered units. Currently, {booked_str}."
-        })
-
-    # 5. Developer & MahaRERA
-    status = p.get("maharera_status") or "Active"
-    complaints = p.get("complaint_count", 0)
-    faqs.append({
-        "topic": "Developer & RERA Registration",
-        "question": f"Who is developing {name} and what is its MahaRERA registration number?",
-        "answer": f"{name} is developed by {dev}. It is registered with MahaRERA under identifier {rera} (Status: {status}) with {complaints} complaints reported on the official portal."
-    })
-
-    # 6. Price Calculation Caveats
-    faqs.append({
-        "topic": "Methodology & Disclaimers",
-        "question": "How are FlatNama sold prices and statistics calculated?",
-        "answer": "FlatNama indicates the price per square foot at or below which 80% of observed flats sold in a given year went, derived from Maharashtra registration filings. These project summaries do not reflect individual deed negotiations, specific floor premiums, or unrecorded transactions."
-    })
+    # 2. Parse HTML FAQ sections (<details> or accordion with FAQ classes)
+    for block in soup.find_all(["details", "div"], class_=re.compile(r"\b(?:faq|accordion)\b", re.I)):
+        summary = block.find(["summary", "h3", "h4", "button"])
+        if summary:
+            q = clean_text(summary.get_text(" ", strip=True))
+            content_nodes = [c for c in block.find_all(["p", "div", "span"], recursive=False) if c != summary]
+            ans = clean_text(" ".join(c.get_text(" ", strip=True) for c in content_nodes))
+            if q and ans and len(q) > 5 and len(ans) > 10:
+                faqs.append({"topic": "Source FAQ", "question": q, "answer": ans, "is_synthesized": False})
 
     return faqs
 
@@ -1401,14 +1358,22 @@ def parse_project_page(url: str, html: str) -> dict[str, Any]:
 
     if possession_ext_months or possession_ext_note or re.search(r"extended by \d+ months|possession date was extended|possession date extended", flat_text, re.I):
         possession_extension_status = "Extended"
-    elif possession_date:
+    elif re.search(r"possession date unchanged|on schedule", flat_text, re.I):
         possession_extension_status = "On Schedule"
+    elif possession_date:
+        possession_extension_status = "Reported"
     else:
-        possession_extension_status = "Not Reported"
+        possession_extension_status = None
 
-    ready_to_move = (status == "Ready to move")
-    structural_complete = (rcc_pct == 100.0) if rcc_pct is not None else False
-    finishing_complete = (finishing_pct == 100.0) if finishing_pct is not None else False
+    if status == "Ready to move":
+        ready_to_move = True
+    elif status in ("Mid-construction", "Early stage", "Nearing possession"):
+        ready_to_move = False
+    else:
+        ready_to_move = None
+
+    structural_complete = (rcc_pct == 100.0) if rcc_pct is not None else None
+    finishing_complete = (finishing_pct == 100.0) if finishing_pct is not None else None
 
     unit_counts = aggregate_unit_mix(unit_mix)
 
@@ -1526,7 +1491,7 @@ def parse_project_page(url: str, html: str) -> dict[str, Any]:
         },
     }
 
-    result["faqs"] = generate_project_faqs(result)
+    result["faqs"] = extract_source_faqs(soup)
 
     quality_warnings: list[str] = []
     if "price per sq ft, year by year" in flat_text.lower() and not result.get("sale_year_stats"):
@@ -1647,7 +1612,9 @@ class Store:
         with self.conn.cursor() as cur:
             cur.execute(
                 """INSERT INTO area_page_snapshots (run_id, source_page_id, area_url, area_name, content_sha256, parser_version, data)
-                   VALUES (%s,%s,%s,%s,%s,%s,%s) ON CONFLICT (area_url, content_sha256) DO NOTHING""",
+                   VALUES (%s,%s,%s,%s,%s,%s,%s)
+                   ON CONFLICT (area_url, content_sha256, parser_version)
+                   DO UPDATE SET data = EXCLUDED.data, observed_at = now()""",
                 (run_id, source_page_id, data["area_url"], data.get("area_name"), content_hash, PARSER_VERSION, Jsonb(data)),
             )
         self.conn.commit()
@@ -1799,7 +1766,7 @@ class Store:
                     last_scraped_at=EXCLUDED.last_scraped_at""",
                 (
                     key, data.get("rera_number"), data["project_name"], data.get("phase_name"), data.get("developer"),
-                    data.get("project_type", "Residential"), data.get("project_description"), data.get("locality"),
+                    data.get("project_type"), data.get("project_description"), data.get("locality"),
                     data.get("sub_locality"), data.get("city", "Pune"), data.get("district", "Pune"), data.get("pin_code"),
                     data["project_url"], data.get("area_page_url"), data.get("map_url"), data.get("displayed_address"),
                     data.get("maharera_status"), data.get("construction_stage"), data.get("launch_date_text"),
@@ -1807,14 +1774,14 @@ class Store:
                     data.get("possession_month"), data.get("possession_year"), data.get("original_possession_date_text"),
                     data.get("possession_extension_status"), data.get("possession_extension_months"), data.get("possession_extension_note"),
                     data.get("promised_timeline_text"), data.get("promised_timeline_months"), data.get("months_elapsed_since_launch"),
-                    data.get("months_remaining_to_possession"), data.get("ready_to_move_status", False),
-                    data.get("structural_completion_status", False), data.get("finishing_completion_status", False),
+                    data.get("months_remaining_to_possession"), data.get("ready_to_move_status"),
+                    data.get("structural_completion_status"), data.get("finishing_completion_status"),
                     data.get("building_count"), data.get("land_acres"), data.get("excavation_pct"), data.get("rcc_pct"),
-                    data.get("finishing_pct"), data.get("complaint_count", 0),
+                    data.get("finishing_pct"), data.get("complaint_count"),
                     data.get("total_units"), data.get("units_for_sale"), data.get("units_booked"), data.get("not_for_sale_units"),
                     data.get("reported_booking_denominator"), data.get("recent_bookings_count"), data.get("booking_pct"), data.get("booking_status"),
-                    data.get("units_1rk", 0), data.get("units_1bhk", 0), data.get("units_2bhk", 0), data.get("units_3bhk", 0),
-                    data.get("units_4bhk", 0), data.get("units_5bhk_plus", 0), data.get("units_other", 0), data.get("total_residential_units", 0),
+                    data.get("units_1rk"), data.get("units_1bhk"), data.get("units_2bhk"), data.get("units_3bhk"),
+                    data.get("units_4bhk"), data.get("units_5bhk_plus"), data.get("units_other"), data.get("total_residential_units"),
                     data.get("latest_sale_year"), data.get("price_per_sqft_80pct"), data.get("price_per_sqft_80pct_source"), data.get("latest_sale_count"),
                     data.get("current_ytd_price"), data.get("previous_year_price"), data.get("headline_price_per_sqft_80pct"),
                     data.get("headline_price_year_label"), data.get("headline_price_sale_count"),
@@ -1829,13 +1796,25 @@ class Store:
             )
             cur.execute(
                 """INSERT INTO project_snapshots (project_key, source_page_id, content_sha256, parser_version, data)
-                   VALUES (%s,%s,%s,%s,%s) ON CONFLICT (project_key, content_sha256) DO NOTHING RETURNING snapshot_id""",
+                   VALUES (%s,%s,%s,%s,%s)
+                   ON CONFLICT (project_key, content_sha256, parser_version)
+                   DO UPDATE SET data = EXCLUDED.data, observed_at = now()
+                   RETURNING snapshot_id""",
                 (key, source_page_id, content_hash, PARSER_VERSION, Jsonb(data)),
             )
             snapshot_row = cur.fetchone()
             is_new_snapshot = snapshot_row is not None
             if is_new_snapshot:
                 snapshot_id = snapshot_row[0]
+                cur.execute("DELETE FROM project_unit_mix WHERE snapshot_id = %s", (snapshot_id,))
+                cur.execute("DELETE FROM project_sale_year_stats WHERE snapshot_id = %s", (snapshot_id,))
+                cur.execute("DELETE FROM project_size_price_bands WHERE snapshot_id = %s", (snapshot_id,))
+                cur.execute("DELETE FROM project_progress_updates WHERE snapshot_id = %s", (snapshot_id,))
+                cur.execute("DELETE FROM project_comparables WHERE snapshot_id = %s", (snapshot_id,))
+                cur.execute("DELETE FROM project_comparison_benchmarks WHERE snapshot_id = %s", (snapshot_id,))
+                cur.execute("DELETE FROM project_related_links WHERE snapshot_id = %s", (snapshot_id,))
+                cur.execute("DELETE FROM project_faqs WHERE snapshot_id = %s", (snapshot_id,))
+                cur.execute("DELETE FROM project_quality_audits WHERE snapshot_id = %s", (snapshot_id,))
                 for item in data.get("flat_type_mix", []):
                     cur.execute(
                         "INSERT INTO project_unit_mix (snapshot_id, project_key, flat_type, unit_count) VALUES (%s,%s,%s,%s) ON CONFLICT DO NOTHING",
@@ -1892,6 +1871,14 @@ class Store:
                         (snapshot_id, key, q.get("parser_version", PARSER_VERSION), q.get("fields_checked", 0), q.get("fields_present", 0),
                          q.get("completeness_pct", 0.0), Jsonb(q.get("warnings", [])), Jsonb(q)),
                     )
+        try:
+            from data_quality import validate_project_record, persist_quality_issues
+            issues = validate_project_record(data)
+            if issues:
+                persist_quality_issues(issues, self.conn)
+        except Exception as dq_err:
+            LOG.debug("Data quality issue persistence notice: %s", dq_err)
+
         self.conn.commit()
         return key, is_new_snapshot
 

@@ -1,24 +1,24 @@
-﻿project_key,project_name,measure,this_project,similar_projects_benchmark
-P52100050860,"State Bank of India Employees Himgauri Co Operative Housing Society Ltd, Erandwane",Promised timeline (launch to possession),3 yrs 4 mths,2 yrs 9 mths
-P52100050860,"State Bank of India Employees Himgauri Co Operative Housing Society Ltd, Erandwane",Possession date extended,No,1 of 3
-P52100050860,"State Bank of India Employees Himgauri Co Operative Housing Society Ltd, Erandwane",Possession date (MahaRERA),September 2026,May 2027
-P52100050860,"State Bank of India Employees Himgauri Co Operative Housing Society Ltd, Erandwane",Concrete structure (RCC) complete,100%,100%
-P52100050860,"State Bank of India Employees Himgauri Co Operative Housing Society Ltd, Erandwane",Share of units for sale that are booked,100%,69%
-P52100050860,"State Bank of India Employees Himgauri Co Operative Housing Society Ltd, Erandwane",Complaints on MahaRERA (filed by or against the builder),0,0
-P52100055029,Venkatesh Erandwane Central Building A2 Phase 3,Promised timeline (launch to possession),3 yrs 4 mths,3 yrs 2 mths
-P52100055029,Venkatesh Erandwane Central Building A2 Phase 3,Possession date extended,No,1 of 4
-P52100055029,Venkatesh Erandwane Central Building A2 Phase 3,Possession date (MahaRERA),June 2027,September 2027
-P52100055029,Venkatesh Erandwane Central Building A2 Phase 3,Concrete structure (RCC) complete,60%,80%
-P52100055029,Venkatesh Erandwane Central Building A2 Phase 3,Share of units for sale that are booked,55%,42%
-P52100055029,Venkatesh Erandwane Central Building A2 Phase 3,Complaints on MahaRERA (filed by or against the builder),4,0
-P52100066479,Erandwane Business Zone,Promised timeline (launch to possession),2 yrs 9 mths,3 yrs 4 mths
-P52100066479,Erandwane Business Zone,Possession date extended,No,1 of 3
-P52100066479,Erandwane Business Zone,Possession date (MahaRERA),March 2027,February 2028
-P52100066479,Erandwane Business Zone,Concrete structure (RCC) complete,100%,60%
-P52100066479,Erandwane Business Zone,Share of units for sale that are booked,21%,52%
-P52100066479,Erandwane Business Zone,Complaints on MahaRERA (filed by or against the builder),0,1
-P52100033449,"Chintamani Capital & Vinay Residency, Erandwane",Promised timeline (launch to possession),3 yrs 3 mths,3 yrs 10 mths
-P52100033449,"Chintamani Capital & Vinay Residency, Erandwane",Possession date extended,By 2 years 7 months,2 of 5
-P52100033449,"Chintamani Capital & Vinay Residency, Erandwane",Possession date (MahaRERA),December 2027,December 2026
-P52100033449,"Chintamani Capital & Vinay Residency, Erandwane",Concrete structure (RCC) complete,25%,100%
-P52100033449,"Chintamani Capital & Vinay Residency, Erandwane",Complaints on MahaRERA (filed by or against the builder),0,0
+﻿benchmark_id,snapshot_id,project_key,measure,this_project,similar_projects,raw_row
+185,1,P52100050860,Promised timeline (launch to possession),3 yrs 4 mths,2 yrs 9 mths,"[""Promised timeline (launch to possession)"", ""3 yrs 4 mths"", ""2 yrs 9 mths""]"
+186,1,P52100050860,Possession date extended,No,1 of 3,"[""Possession date extended"", ""No"", ""1 of 3""]"
+187,1,P52100050860,Possession date (MahaRERA),September 2026,May 2027,"[""Possession date (MahaRERA)"", ""September 2026"", ""May 2027""]"
+188,1,P52100050860,Concrete structure (RCC) complete,100%,100%,"[""Concrete structure (RCC) complete"", ""100%"", ""100%""]"
+189,1,P52100050860,Share of units for sale that are booked,100%,69%,"[""Share of units for sale that are booked"", ""100%"", ""69%""]"
+190,1,P52100050860,Complaints on MahaRERA (filed by or against the builder),0,0,"[""Complaints on MahaRERA (filed by or against the builder)"", ""0"", ""0""]"
+191,7,P52100055029,Promised timeline (launch to possession),3 yrs 4 mths,3 yrs 2 mths,"[""Promised timeline (launch to possession)"", ""3 yrs 4 mths"", ""3 yrs 2 mths""]"
+192,7,P52100055029,Possession date extended,No,1 of 4,"[""Possession date extended"", ""No"", ""1 of 4""]"
+193,7,P52100055029,Possession date (MahaRERA),June 2027,September 2027,"[""Possession date (MahaRERA)"", ""June 2027"", ""September 2027""]"
+194,7,P52100055029,Concrete structure (RCC) complete,60%,80%,"[""Concrete structure (RCC) complete"", ""60%"", ""80%""]"
+195,7,P52100055029,Share of units for sale that are booked,55%,42%,"[""Share of units for sale that are booked"", ""55%"", ""42%""]"
+196,7,P52100055029,Complaints on MahaRERA (filed by or against the builder),4,0,"[""Complaints on MahaRERA (filed by or against the builder)"", ""4"", ""0""]"
+197,8,P52100066479,Promised timeline (launch to possession),2 yrs 9 mths,3 yrs 4 mths,"[""Promised timeline (launch to possession)"", ""2 yrs 9 mths"", ""3 yrs 4 mths""]"
+198,8,P52100066479,Possession date extended,No,1 of 3,"[""Possession date extended"", ""No"", ""1 of 3""]"
+199,8,P52100066479,Possession date (MahaRERA),March 2027,February 2028,"[""Possession date (MahaRERA)"", ""March 2027"", ""February 2028""]"
+200,8,P52100066479,Concrete structure (RCC) complete,100%,60%,"[""Concrete structure (RCC) complete"", ""100%"", ""60%""]"
+201,8,P52100066479,Share of units for sale that are booked,21%,52%,"[""Share of units for sale that are booked"", ""21%"", ""52%""]"
+202,8,P52100066479,Complaints on MahaRERA (filed by or against the builder),0,1,"[""Complaints on MahaRERA (filed by or against the builder)"", ""0"", ""1""]"
+203,9,P52100033449,Promised timeline (launch to possession),3 yrs 3 mths,3 yrs 10 mths,"[""Promised timeline (launch to possession)"", ""3 yrs 3 mths"", ""3 yrs 10 mths""]"
+204,9,P52100033449,Possession date extended,By 2 years 7 months,2 of 5,"[""Possession date extended"", ""By 2 years 7 months"", ""2 of 5""]"
+205,9,P52100033449,Possession date (MahaRERA),December 2027,December 2026,"[""Possession date (MahaRERA)"", ""December 2027"", ""December 2026""]"
+206,9,P52100033449,Concrete structure (RCC) complete,25%,100%,"[""Concrete structure (RCC) complete"", ""25%"", ""100%""]"
+207,9,P52100033449,Complaints on MahaRERA (filed by or against the builder),0,0,"[""Complaints on MahaRERA (filed by or against the builder)"", ""0"", ""0""]"
