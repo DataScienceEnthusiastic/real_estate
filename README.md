@@ -1,109 +1,115 @@
-# FlatNama → PostgreSQL research collector
+# FlatNama → PostgreSQL & CSV Collector (v0.6.0)
 
-A small, versioned collector for **research-sized, permission-respecting samples** of FlatNama project pages. It extracts structured project details, annual sold-price summaries, size/price bands, construction updates and comparison rows, then stores them in PostgreSQL with source URLs, hashes, crawl logs and historical snapshots.
+An advanced, polite research collector for extracting structured real estate data from [FlatNama](https://flatnama.com) into **PostgreSQL** and **CSV spreadsheets**.
 
-## Important scope and data-quality limits
+It captures an exhaustive set of project features across **16 structured data categories**, computes exact timeline/possession metrics and construction progress deltas, generates project FAQs, creates relational tables with analytical views, and exports clean Excel-ready CSV files.
 
-FlatNama's [Terms of Use](https://flatnama.com/terms-and-privacy/) say that pages may be linked, shared and quoted with attribution, welcome well-behaved crawlers, ask visitors not to overload the site, and state: **“Please don’t copy the site as a whole.”** This tool therefore has small default limits and does not automatically spider the entire Pune catalogue. Obtain explicit written permission from FlatNama before expanded or whole-catalog collection. The `--authorized-bulk` guard is an extra safety check, not permission itself.
+---
 
-FlatNama's own [guide](https://flatnama.com/guides/) says project information reflects developer reports to MahaRERA and may be incomplete or incorrect, and that government sale records obtained by FlatNama may not include every sale. This project preserves those caveats.
+## The 16 Extraction Categories
 
-**Important:** FlatNama usually shows *project-level annual price summaries*, such as a price threshold that 80% of observed flats sold at or below, plus a sale count and common flat-size/price band. These are **not unit-level transaction records**. The scraper does not invent exact transaction prices, individual floor plans, balcony views, road frontage or unit-level facts that the source page does not expose. Those features require other sources and/or direct inspection.
+1. **Project Identity**: Project name, MahaRERA ID, phase/wing name, canonical URL, developer, category/type (Residential/Commercial/Mixed), description, breadcrumbs, registration status.
+2. **Geographic & Location Data**: Area/locality, sub-locality, city, district, 6-digit PIN code, Google Maps link, displayed address, area catalogue URL.
+3. **Launch, Completion & Possession**: Launch month & year, promised timeline in months, registered possession target, original possession target, possession extension status (`Extended` / `On Schedule`), delay in months, months elapsed since launch, months remaining, ready-to-move status.
+4. **Construction & Physical Progress**: Buildings count, land area in acres, excavation %, RCC %, final finishes %, construction stage, structural completion status, finishing completion status, complaints count, chronological progress updates with delta changes.
+5. **Inventory & Flat Configuration**: Total registered units, units for sale, units booked, not for sale units, booking %, booking status, recent bookings count, and flat mix breakdown (`1 RK`, `1 BHK`, `2 BHK`, `3 BHK`, `4 BHK`, `5+ BHK`, `Other`).
+6. **Actual Sold-Price Summaries**: 80th-percentile rate per sq ft, latest sales year, transaction count, current year-to-date rate (`YYYY so far`), previous year rate, YoY change %, YoY direction (`up`/`down`/`stable`), rate vs nearby projects premium/discount %, price area basis.
+7. **Size-Wise Pricing Bands**: Flat size ranges (sq ft), observed buyer price brackets (INR Lakh/Crore), min/max size and price bounds.
+8. **Historical Project Updates**: Detailed milestone table with excavation, RCC, finishes, bookings, and delta change calculations between consecutive updates.
+9. **Similar-Project Comparisons**: Benchmark group size, benchmark PIN code, and individual comparable projects with launch, possession, RCC, and bookings.
+10. **Price & Market Benchmark Indicators**: Key measure comparisons (promised timeline, possession extensions, possession date, RCC complete %, share of units booked, complaints).
+11. **Frequently Asked Questions & Explanatory Content**: Synthesized and extracted Q&As covering possession dates, construction status, pricing, inventory, developer background, and 80%-threshold definitions.
+12. **Area & Listing-Page Data**: Area name, PIN code, total listed projects, visible projects, small projects hidden behind filters, recent 6-month launches, RCC complete count, extended possession count, nearby areas.
+13. **Pune Market Analytics**: Area-by-year macro trends (launches, units, structural completion).
+14. **Related Projects & Navigation**: Other phases of the same development, comparable project links, area navigation links, map links.
+15. **Raw HTML & Technical Metadata**: Technical DOM inventory (meta tags, OpenGraph tags, canonical URL, headings, tables, lists, key-values, links, images metadata).
+16. **Provenance & Data Quality**: Parser version, field presence score, completeness percentage, and detailed QA audit warnings.
 
-Raw HTML and images are **not** stored. The database stores structured extractions, a content hash, URL and selected image URL metadata only. It does not bypass CAPTCHA, authentication, robots.txt, 403/429 responses or other access controls.
+---
 
-## What is collected
+## Quickstart
 
-- Project identity: displayed name, MahaRERA identifier, developer, locality, PIN code, canonical URL and map link (when exposed).
-- Dates and status: launch date text, registered possession date text, status/stage shown, original possession date when parseable.
-- Inventory: total units, mix of RK/BHK/other units, reported units for sale/booked and derived booked percentage when the page exposes enough information, building count, land area and complaint count.
-- Build progress: excavation, RCC structure and final-finishes percentages, plus visible dated MahaRERA progress rows.
-- Price summaries: annual year labels, displayed price-per-sq-ft threshold, count of observed registrations, and size/price bands where available.
-- Comparisons: comparable-project names and raw row labels when table structure permits extraction.
-- Provenance: source URL, fetch time, HTTP status, SHA-256 content hash, parser version, each crawl run, and versioned JSON snapshots.
+### 1. Environment Setup
 
-The HTML layout can change. Null means “not confidently parsed”; it does not mean zero. Review a small sample of values against the rendered pages before treating the parsed data as analytically ready.
+```powershell
+# Activate virtual environment
+.\.venv\Scripts\Activate.ps1
 
-## Setup
-
-Requirements: Python 3.11+ and Docker Desktop (or a PostgreSQL 15+ server).
-
-1. Unzip this folder and open a terminal in it.
-2. Create a `.env` file by copying `.env.example`. Set `FLATNAMA_USER_AGENT` to a descriptive name and a real contact channel.
-3. Start PostgreSQL:
-
-   ```bash
-   docker compose up -d db
-   ```
-
-   The first start creates the schema from `schema.sql`. If you have an existing database, the scraper also applies the schema when it connects.
-
-4. Create a virtual environment and install Python dependencies:
-
-   **Windows PowerShell**
-   ```powershell
-   py -m venv .venv
-   .\.venv\Scripts\Activate.ps1
-   pip install -r requirements.txt
-   Copy-Item .env.example .env
-   ```
-
-   **macOS/Linux**
-   ```bash
-   python3 -m venv .venv
-   source .venv/bin/activate
-   pip install -r requirements.txt
-   cp .env.example .env
-   ```
-
-5. In `.env`, replace `your-email@example.com` with a valid contact address and verify `DATABASE_URL` matches your PostgreSQL login.
-
-## Run a small sample
-
-`seed_urls.txt` contains one area page and one project page as examples. The default run only processes explicit area pages and explicit project pages; it does not follow other links unless you opt in.
-
-```bash
-python scraper.py --input seed_urls.txt --dry-run
-python scraper.py --input seed_urls.txt
+# Install dependencies
+pip install -r requirements.txt
 ```
 
-To discover project links from a small set of area pages and collect at most 25 project pages in that run:
+Verify your [.env](file:///u:/Projects_/real_estate/.env) has your contact email in `FLATNAMA_USER_AGENT` and your database credentials in `DATABASE_URL`.
 
-```bash
-python scraper.py --input seed_urls.txt --discover-project-links --max-area-pages 5 --max-project-pages 25
+### 2. Start PostgreSQL (Docker)
+
+```powershell
+docker compose up -d db
 ```
 
-The collector waits at least 2.5 seconds between HTTP requests by default. It checks robots.txt first. If the request is forbidden, rate-limited, challenged, or robots.txt disallows access, it stops rather than trying to work around the restriction. It does not use proxy rotation, browser stealth, CAPTCHA solving or concurrent request bursts.
+Tables, indexes, and analytical views will initialize automatically via [schema.sql](file:///u:/Projects_/real_estate/schema.sql).
 
-### Expanded / bulk runs
+### 3. Run Parser Unit Tests
 
-Do not run an entire-catalogue scrape just because the links are publicly visible. FlatNama's Terms of Use say not to copy the site as a whole. Request written permission or a data-sharing arrangement from the site operators first. Once permission is granted, set `FLATNAMA_BULK_PERMISSION_CONFIRMED=1` in `.env` and pass `--authorized-bulk`; the code still follows robots.txt, throttling and stop-on-403/429 rules.
+```powershell
+python -m unittest discover -s tests -v
+```
 
-## Inspect the database
+---
 
-Connect with `psql` or a GUI such as DBeaver. Useful tables:
+## Running the Scraper
 
-- `projects`: latest normalized project-level view.
-- `project_snapshots`: full structured extraction per changed page (JSONB; historical view).
-- `project_sale_year_stats`: annual price/sales-count summaries shown by FlatNama; not individual deed records.
-- `project_size_price_bands`: common size/price ranges described on project pages.
-- `project_unit_mix`: reported unit counts by configuration.
-- `project_progress_updates`: dated progress history when it is visible in a parseable table.
-- `project_comparables`: visible peer rows.
-- `source_pages`, `scrape_runs`: provenance, status, hashes and errors.
+### Sample Run with QA Report and CSV Export
 
-Example queries are in `queries.sql`.
+```powershell
+python scraper.py --input seed_urls.txt --discover-project-links --max-project-pages 10 --report-json reports\deccan_sample_v3.json --export-csv exports
+```
 
-## Updating safely
+To run without writing to PostgreSQL (dry run):
+```powershell
+python scraper.py --input seed_urls.txt --discover-project-links --max-project-pages 10 --dry-run --report-json reports\deccan_sample_v3.json --export-csv exports
+```
 
-- Re-run the same seed list periodically. `projects` upserts the latest values; `project_snapshots` stores new snapshots only when page content changes.
-- Review `source_pages.parse_status`, null rates and snapshots after each run.
-- If parsing degrades, save a manually supplied local HTML fixture from a page you are authorized to retain and write a parser test against it. Do not defeat access controls to obtain fixtures.
-- Keep the source URL and observed timestamp with every feature. Cite FlatNama in downstream research, and clearly distinguish data “reported by FlatNama” from “verified against the original MahaRERA/IGR record.”
+---
 
-## Known limitations in v0.1
+## Exporting CSV Spreadsheets
 
-- CSS/HTML structure has not been validated against a live fetch in the authoring environment; internet DNS access was unavailable during package creation. This version has been syntax-checked, but you should run `--dry-run` and inspect the first records on your own machine before a longer collection.
-- Date/status fields intentionally remain strings because source wording can vary; normalize to dates only after validation.
-- Project-level statistics are not flat-level sales records. No row should be represented as a specific deed-level transaction without original transaction evidence.
-- The current parser is heuristic and needs fixture-backed tests before production investment analysis.
+You can export the entire scraped dataset at any time using [export_data.py](file:///u:/Projects_/real_estate/export_data.py):
+
+```powershell
+# Export from a JSON report file
+python export_data.py --json reports\deccan_sample_v3.json --output-dir exports
+
+# Or export directly from live PostgreSQL database
+python export_data.py --db --output-dir exports
+```
+
+### Generated CSV Files in `exports/`:
+- `projects_master.csv`: Wide master table with 69 structured columns per project.
+- `projects_complete.csv`: Single all-in-one spreadsheet with flattened unit mix, price history, and progress summaries.
+- `sale_prices.csv`: All year-by-year 80th-percentile price records and sales counts.
+- `progress_updates.csv`: All historical construction milestones with progress deltas.
+- `unit_mix.csv`: Unit configurations (`1 RK` through `5+ BHK`).
+- `size_price_bands.csv`: Size ranges and buyer price brackets.
+- `comparables.csv`: Specific comparable projects.
+- `comparison_benchmarks.csv`: Benchmarks comparing project to similar peers.
+- `faqs.csv`: Project-specific FAQs and explanatory notes.
+- `related_links.csv`: Other phases and navigation links.
+- `area_summaries.csv`: Area catalog counts, hidden project counts, and filters.
+- `quality_audits.csv`: Extraction completeness scores, warnings, and missing fields.
+
+All CSVs are encoded in **UTF-8 with BOM** (`utf-8-sig`) so that symbols like `₹` and special formatting open seamlessly in Microsoft Excel, Google Sheets, and Pandas.
+
+---
+
+## PostgreSQL Views & Queries
+
+The database provides pre-built analytical views for immediate inspection:
+- `v_projects_master`: High-level master overview of all projects.
+- `v_project_delays_and_progress`: Focus on timelines, delays in months, and structural stages.
+- `v_project_pricing_summary`: Latest 80%-threshold rate, YoY price growth, and market comparisons.
+- `v_project_inventory_summary`: Inventory breakdown, units booked, and flat types.
+- `v_project_comparables_summary`: Project vs similar project benchmarks.
+- `v_project_faqs_overview`: Questions and verified answers per project.
+
+Ready-to-run SQL queries are provided in [queries.sql](file:///u:/Projects_/real_estate/queries.sql).

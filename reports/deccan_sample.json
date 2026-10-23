@@ -1,0 +1,2835 @@
+{
+  "parser_version": "0.4.0",
+  "run_id": "e928b9e1-db67-4336-ab8b-cc7abb18eeb1",
+  "status": "complete",
+  "seed_file": "seed_urls.txt",
+  "started_scope": {
+    "area_urls": [
+      "https://flatnama.com/pune/deccan/"
+    ],
+    "direct_project_urls": [
+      "https://flatnama.com/pune/p52100050860-state-bank-of-india-employees-himgauri-co-operative-housing-society-ltd/"
+    ]
+  },
+  "area_discovery": [
+    {
+      "area_url": "https://flatnama.com/pune/deccan/",
+      "area_summary": {
+        "area_url": "https://flatnama.com/pune/deccan/",
+        "page_title": "Projects in Deccan: RERA List, No Spam Calls",
+        "heading": "Projects in Deccan",
+        "area_name": "Deccan",
+        "pin_code": null,
+        "listed_project_count": null,
+        "visible_projects_count_from_hidden_toggle": 22,
+        "small_projects_hidden_count": 105,
+        "launched_last_6_months_count": null,
+        "rcc_complete_count": null,
+        "possession_date_extended_count": null,
+        "nearby_areas": [
+          {
+            "name": "Sinhagad Road",
+            "url": "https://flatnama.com/pune/sinhagad-road/"
+          },
+          {
+            "name": "Shivajinagar",
+            "url": "https://flatnama.com/pune/shivajinagar/"
+          },
+          {
+            "name": "Peth Areas",
+            "url": "https://flatnama.com/pune/peth-areas/"
+          },
+          {
+            "name": "Senapati Bapat Road, Model Colony",
+            "url": "https://flatnama.com/pune/senapati-bapat-road-model-colony/"
+          },
+          {
+            "name": "Stratig Consulting",
+            "url": "https://www.stratigconsulting.in/"
+          },
+          {
+            "name": "Rahul Ajmera",
+            "url": "https://www.rahulajmera.com"
+          },
+          {
+            "name": "All areas",
+            "url": "https://flatnama.com/pune/areas/"
+          },
+          {
+            "name": "Data & Insights",
+            "url": "https://flatnama.com/pune/data-analytics/"
+          },
+          {
+            "name": "Guides",
+            "url": "https://flatnama.com/guides/"
+          },
+          {
+            "name": "About",
+            "url": "https://flatnama.com/about/"
+          },
+          {
+            "name": "Terms & Privacy",
+            "url": "https://flatnama.com/terms-and-privacy/"
+          },
+          {
+            "name": "Feedback",
+            "url": "https://flatnama.com/feedback/"
+          }
+        ],
+        "filters_detected": [
+          "budget",
+          "construction stage",
+          "flat type",
+          "possession year",
+          "show small projects",
+          "sort"
+        ],
+        "source_notes": {
+          "source": "FlatNama area page",
+          "scope": "Area-level catalogue summary; displayed totals and filter controls may represent only the default view.",
+          "limitations": [
+            "Area totals do not establish full catalogue extraction coverage.",
+            "Hidden small projects and client-side filter results may not all be available in the returned HTML."
+          ]
+        }
+      },
+      "project_links_discovered": 22,
+      "discovery_method": "project_card_heuristic",
+      "project_urls": [
+        "https://flatnama.com/pune/p52100032631-venkatesh-erandwane-central-building-b1-phase-2/",
+        "https://flatnama.com/pune/p52100008687-45-nirvaana-hill-c2-wing/",
+        "https://flatnama.com/pune/p52100032017-venkatesh-erandwane-central-building-b2-phase-3/",
+        "https://flatnama.com/pune/p52100032629-venkatesh-erandwane-central-building-b3-phase-4/",
+        "https://flatnama.com/pune/p52100031886-venkatesh-erandwane-central-building-a1/",
+        "https://flatnama.com/pune/p52100055029-venkatesh-erandwane-central-building-a2-phase-3/",
+        "https://flatnama.com/pune/p52100066479-erandwane-business-zone/",
+        "https://flatnama.com/pune/p52100033449-chintamani-capital-and-vinay-residency/",
+        "https://flatnama.com/pune/p52100034858-parkside/",
+        "https://flatnama.com/pune/p52100050860-state-bank-of-india-employees-himgauri-co-operative-housing-society-ltd/",
+        "https://flatnama.com/pune/pm1260002400079-yashodhan-co-operative-housing-society/",
+        "https://flatnama.com/pune/p52100077614-chandrabhaga/",
+        "https://flatnama.com/pune/p52100052758-dhanasampada/",
+        "https://flatnama.com/pune/p52100077075-kuldeep/",
+        "https://flatnama.com/pune/p52100078013-vb-sapphire/",
+        "https://flatnama.com/pune/p52100035108-parisar-apartment/",
+        "https://flatnama.com/pune/p52100076724-the-pleasant-co-op-housing-society-ltd/",
+        "https://flatnama.com/pune/p52100076987-sweet-home-co-operative-housing-society/",
+        "https://flatnama.com/pune/p52100026710-panchadri/",
+        "https://flatnama.com/pune/p52100053895-abhishek-co-operative-housing-society-limited/",
+        "https://flatnama.com/pune/p52100051649-suvarnalata-sahakari-gruhrachana-sanstha-maryadit/",
+        "https://flatnama.com/pune/p52100033240-smita-apartment/"
+      ]
+    }
+  ],
+  "counts": {
+    "area_pages": 1,
+    "project_pages": 10,
+    "succeeded": 11,
+    "failed": 0
+  },
+  "projects": [
+    {
+      "project_url": "https://flatnama.com/pune/p52100050860-state-bank-of-india-employees-himgauri-co-operative-housing-society-ltd/",
+      "page_title": "State Bank of India Employees Himgauri Co Operative Housing Society Ltd",
+      "meta_description": "State Bank of India Employees Himgauri Co Operative Housing Society Ltd: most flats sold for ₹18,300 per sq ft or less (incl. balconies and terrace) in 2025.",
+      "project_name": "State Bank of India Employees Himgauri Co Operative Housing Society Ltd, Erandwane",
+      "rera_number": "P52100050860",
+      "developer": "FORTUNE DEVELOPERS",
+      "locality": "Erandwane",
+      "pin_code": "411004",
+      "maharera_status": "Active",
+      "construction_stage": "Ready to move",
+      "launch_date_text": "May 2023",
+      "promised_timeline_text": "3 years 4 months promised",
+      "possession_date_text": "September 2026",
+      "original_possession_date_text": null,
+      "total_units": 62,
+      "units_for_sale": 34,
+      "units_booked": 34,
+      "not_for_sale_units": null,
+      "units_for_sale_derived_from_total_minus_not_for_sale": false,
+      "booking_status": "all_booked",
+      "booking_pct": 100.0,
+      "building_count": 62,
+      "land_acres": 0.3,
+      "excavation_pct": 100.0,
+      "rcc_pct": 100.0,
+      "finishing_pct": 100.0,
+      "complaint_count": 0,
+      "latest_sale_year": 2025,
+      "price_per_sqft_80pct": 18300.0,
+      "price_per_sqft_80pct_source": "annual_year_by_year",
+      "latest_sale_count": 11,
+      "headline_price_per_sqft_80pct": null,
+      "headline_price_year_label": null,
+      "headline_price_sale_count": null,
+      "headline_price_raw_text": null,
+      "recent_bookings_count": null,
+      "reported_booking_denominator": 34,
+      "booking_pct_displayed": null,
+      "price_area_basis": "includes balconies and terrace",
+      "rate_vs_nearby_projects_pct": null,
+      "year_over_year_change_pct": 1.0,
+      "year_over_year_comparison_year": 2024,
+      "possession_extension_months": null,
+      "possession_extension_note": "Possession date extended",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=State+Bank+of+India+Employees+Himgauri+Co+Operative+Housing+Society+Ltd+Erandwane,+Pune+411004",
+      "flat_type_mix": [
+        {
+          "flat_type": "1 BHK",
+          "unit_count": 3
+        },
+        {
+          "flat_type": "2 BHK",
+          "unit_count": 46
+        },
+        {
+          "flat_type": "3 BHK",
+          "unit_count": 9
+        },
+        {
+          "flat_type": "4 BHK",
+          "unit_count": 4
+        }
+      ],
+      "sale_year_stats": [
+        {
+          "sales_year": 2025,
+          "year_label": "2025 up 1% on 2024",
+          "price_per_sqft_80pct": 18300.0,
+          "sale_count": 11,
+          "raw_row": [
+            "2025 up 1% on 2024",
+            "₹18,300 per sq ft",
+            "11 sales"
+          ]
+        }
+      ],
+      "size_price_bands": [
+        {
+          "year_label": "2024",
+          "min_size_sqft": 830.0,
+          "max_size_sqft": 880.0,
+          "min_price_inr": 13200000.0,
+          "max_price_inr": 17100000.0,
+          "raw_size_label": "830 – 880 sq ft",
+          "raw_price_label": "₹1.32 – 1.71 crore"
+        }
+      ],
+      "flat_sizes_sold_sqft": [],
+      "market_context_snippets": [
+        "3 years 4 months promised",
+        "Possession date unchanged since launch",
+        "up 1% on 2024",
+        "Since Dec 2025: final finishes 40% → 100%",
+        "up 1% on 2024",
+        "Promised timeline (launch to possession)",
+        "Possession date extended",
+        "All of the promised 3 years 4 months have passed",
+        "Its registered possession date is September 2026, unchanged since launch. Construction: excavation complete, structure (RCC) complete, final finishes complete. Construction is reported as complete (structure and final finishes), but completion has not yet been recorded on MahaRERA.",
+        "All units for sale are booked (34 booked). 80% of the flats sold here in 2025 went for ₹18,300 per sq ft or less (up 1% on 2024), counting balconies and terrace in the size, based on 11 registered sales we found. Buyers here paid a rate about 5% lower than at other Erandwane projects in 2025. Most buyers paid ₹1.32–1.71 crore for flats of 830–880 sq ft.",
+        "Prices in a project usually rise as construction progresses. Floor, view and flat size move the price up or down, so treat these figures as a guide."
+      ],
+      "progress_updates": [
+        {
+          "update_label": "Jul 2026",
+          "excavation_pct": 100.0,
+          "rcc_pct": 100.0,
+          "finishing_pct": 100.0,
+          "units_booked": 34,
+          "raw_row": [
+            "Jul 2026",
+            "100%",
+            "100%",
+            "100%",
+            "34"
+          ]
+        },
+        {
+          "update_label": "Dec 2025",
+          "excavation_pct": 100.0,
+          "rcc_pct": 100.0,
+          "finishing_pct": 40.0,
+          "units_booked": 34,
+          "raw_row": [
+            "Dec 2025",
+            "100%",
+            "100%",
+            "40%",
+            "34"
+          ]
+        },
+        {
+          "update_label": "Dec 2024",
+          "excavation_pct": 100.0,
+          "rcc_pct": 100.0,
+          "finishing_pct": 0.0,
+          "units_booked": 27,
+          "raw_row": [
+            "Dec 2024",
+            "100%",
+            "100%",
+            "0%",
+            "27"
+          ]
+        },
+        {
+          "update_label": "Jun 2024",
+          "excavation_pct": 100.0,
+          "rcc_pct": 60.0,
+          "finishing_pct": 0.0,
+          "units_booked": 14,
+          "raw_row": [
+            "Jun 2024",
+            "100%",
+            "60%",
+            "0%",
+            "14"
+          ]
+        },
+        {
+          "update_label": "Dec 2023",
+          "excavation_pct": 0.0,
+          "rcc_pct": 0.0,
+          "finishing_pct": 0.0,
+          "units_booked": 12,
+          "raw_row": [
+            "Dec 2023",
+            "0%",
+            "0%",
+            "0%",
+            "12"
+          ]
+        }
+      ],
+      "comparables": [
+        {
+          "comparable_name": "Suvarnalata Sahakari Gruhrachana Sanstha Maryadit",
+          "launch_date_text": "June 2023",
+          "possession_date_text": "March 2026",
+          "rcc_pct": 100.0,
+          "booking_text": "All units for sale are booked (14 booked)",
+          "raw_row": [
+            "Suvarnalata Sahakari Gruhrachana Sanstha Maryadit",
+            "June 2023",
+            "March 2026",
+            "100%",
+            "All units for sale are booked (14 booked)"
+          ]
+        },
+        {
+          "comparable_name": "Dhanasampada",
+          "launch_date_text": "September 2023",
+          "possession_date_text": "March 2027",
+          "rcc_pct": 100.0,
+          "booking_text": "20 of 29 units booked (69%)",
+          "raw_row": [
+            "Dhanasampada",
+            "September 2023",
+            "March 2027",
+            "100%",
+            "20 of 29 units booked (69%)"
+          ]
+        },
+        {
+          "comparable_name": "Venkatesh Erandwane Central Building A2 Phase 3",
+          "launch_date_text": "February 2024",
+          "possession_date_text": "June 2027",
+          "rcc_pct": 60.0,
+          "booking_text": "57 of 104 units booked (55%)",
+          "raw_row": [
+            "Venkatesh Erandwane Central Building A2 Phase 3",
+            "February 2024",
+            "June 2027",
+            "60%",
+            "57 of 104 units booked (55%)"
+          ]
+        }
+      ],
+      "comparison_summary": [
+        {
+          "measure": "Promised timeline (launch to possession)",
+          "this_project": "3 yrs 4 mths",
+          "similar_projects": "2 yrs 9 mths",
+          "raw_row": [
+            "Promised timeline (launch to possession)",
+            "3 yrs 4 mths",
+            "2 yrs 9 mths"
+          ]
+        },
+        {
+          "measure": "Possession date extended",
+          "this_project": "No",
+          "similar_projects": "1 of 3",
+          "raw_row": [
+            "Possession date extended",
+            "No",
+            "1 of 3"
+          ]
+        },
+        {
+          "measure": "Possession date (MahaRERA)",
+          "this_project": "September 2026",
+          "similar_projects": "May 2027",
+          "raw_row": [
+            "Possession date (MahaRERA)",
+            "September 2026",
+            "May 2027"
+          ]
+        },
+        {
+          "measure": "Concrete structure (RCC) complete",
+          "this_project": "100%",
+          "similar_projects": "100%",
+          "raw_row": [
+            "Concrete structure (RCC) complete",
+            "100%",
+            "100%"
+          ]
+        },
+        {
+          "measure": "Share of units for sale that are booked",
+          "this_project": "100%",
+          "similar_projects": "69%",
+          "raw_row": [
+            "Share of units for sale that are booked",
+            "100%",
+            "69%"
+          ]
+        },
+        {
+          "measure": "Complaints on MahaRERA (filed by or against the builder)",
+          "this_project": "0",
+          "similar_projects": "0",
+          "raw_row": [
+            "Complaints on MahaRERA (filed by or against the builder)",
+            "0",
+            "0"
+          ]
+        }
+      ],
+      "related_project_links": [
+        {
+          "category": "comparable_project",
+          "label": "Suvarnalata Sahakari Gruhrachana Sanstha Maryadit",
+          "url": "https://flatnama.com/pune/p52100051649-suvarnalata-sahakari-gruhrachana-sanstha-maryadit/"
+        },
+        {
+          "category": "comparable_project",
+          "label": "Dhanasampada",
+          "url": "https://flatnama.com/pune/p52100052758-dhanasampada/"
+        },
+        {
+          "category": "comparable_project",
+          "label": "Venkatesh Erandwane Central Building A2 Phase 3",
+          "url": "https://flatnama.com/pune/p52100055029-venkatesh-erandwane-central-building-a2-phase-3/"
+        }
+      ],
+      "image_urls_metadata_only": [
+        "https://flatnama.com/pune/p52100050860-state-bank-of-india-employees-himgauri-co-operative-housing-society-ltd/share.png"
+      ],
+      "source_notes": {
+        "source": "FlatNama",
+        "data_basis": "Structured fields shown on the page; figures may reflect developer-reported MahaRERA submissions and available registered-sale records.",
+        "price_statistic_definition": "FlatNama describes its project price as the rate at or below which 80% of flats sold in the stated period went; it is not an individual transaction price.",
+        "collection_scope": "Limited, rate-limited collection of supplied pages; not a copy of the whole website.",
+        "limitations": [
+          "A page may not show every transaction.",
+          "Construction/bookings data may be developer-reported and may be revised.",
+          "No individual transaction-level sale deeds are extracted by this parser.",
+          "Fields not confidently parsed remain null instead of being guessed."
+        ]
+      },
+      "extraction_quality": {
+        "parser_version": "0.4.0",
+        "fields_checked": 22,
+        "fields_present": 21,
+        "field_presence": {
+          "rera_number": true,
+          "developer": true,
+          "locality": true,
+          "pin_code": true,
+          "launch_date_text": true,
+          "possession_date_text": true,
+          "maharera_status": true,
+          "total_units": true,
+          "units_booked": true,
+          "booking_pct": true,
+          "building_count": true,
+          "land_acres": true,
+          "price_per_sqft_80pct": true,
+          "latest_sale_count": true,
+          "flat_type_mix": true,
+          "flat_sizes_sold_sqft": false,
+          "size_price_bands": true,
+          "sale_year_stats": true,
+          "progress_updates": true,
+          "comparables": true,
+          "comparison_summary": true,
+          "map_url": true
+        },
+        "annual_price_rows": 1,
+        "unit_mix_rows": 4,
+        "flat_sizes_sold_count": 0,
+        "size_price_band_rows": 1,
+        "construction_update_rows": 5,
+        "comparable_rows": 3,
+        "comparison_summary_rows": 6,
+        "warnings": [
+          "only_one_annual_price_row_extracted_check_source_layout"
+        ]
+      }
+    },
+    {
+      "project_url": "https://flatnama.com/pune/p52100032631-venkatesh-erandwane-central-building-b1-phase-2/",
+      "page_title": "Venkatesh Erandwane Central - BUILDING-B1 - Phase 2",
+      "meta_description": "Venkatesh Erandwane Central - BUILDING-B1 - Phase 2, Erandwane: most flats sold for ₹22,700 per sq ft or less (incl. balconies and terrace) in 2025.",
+      "project_name": "Venkatesh Erandwane Central - BUILDING-B1 - Phase 2",
+      "rera_number": "P52100032631",
+      "developer": "SHREE VENKATESH BUILDCON PVT LTD",
+      "locality": "Erandwane",
+      "pin_code": "411004",
+      "maharera_status": "Active",
+      "construction_stage": null,
+      "launch_date_text": "January 2022",
+      "promised_timeline_text": "4 years 8 months promised",
+      "possession_date_text": "September 2026",
+      "original_possession_date_text": null,
+      "total_units": 174,
+      "units_for_sale": 174,
+      "units_booked": 144,
+      "not_for_sale_units": null,
+      "units_for_sale_derived_from_total_minus_not_for_sale": false,
+      "booking_status": "reported_count",
+      "booking_pct": 82.76,
+      "building_count": 174,
+      "land_acres": 1.0,
+      "excavation_pct": 100.0,
+      "rcc_pct": 76.0,
+      "finishing_pct": 12.0,
+      "complaint_count": 0,
+      "latest_sale_year": 2025,
+      "price_per_sqft_80pct": 22700.0,
+      "price_per_sqft_80pct_source": "annual_year_by_year",
+      "latest_sale_count": 13,
+      "headline_price_per_sqft_80pct": null,
+      "headline_price_year_label": null,
+      "headline_price_sale_count": null,
+      "headline_price_raw_text": null,
+      "recent_bookings_count": null,
+      "reported_booking_denominator": 174,
+      "booking_pct_displayed": 83.0,
+      "price_area_basis": "includes balconies and terrace",
+      "rate_vs_nearby_projects_pct": null,
+      "year_over_year_change_pct": -2.0,
+      "year_over_year_comparison_year": 2024,
+      "possession_extension_months": null,
+      "possession_extension_note": null,
+      "map_url": "https://www.google.com/maps/search/?api=1&query=Venkatesh+Erandwane+Central+-+BUILDING-B1+-+Phase+2+Erandwane,+Pune+411004",
+      "flat_type_mix": [
+        {
+          "flat_type": "2 BHK",
+          "unit_count": 116
+        },
+        {
+          "flat_type": "3 BHK",
+          "unit_count": 58
+        }
+      ],
+      "sale_year_stats": [
+        {
+          "sales_year": 2025,
+          "year_label": "2025 down 2% on 2024",
+          "price_per_sqft_80pct": 22700.0,
+          "sale_count": 13,
+          "raw_row": [
+            "2025 down 2% on 2024",
+            "₹22,700 per sq ft",
+            "13 sales"
+          ]
+        }
+      ],
+      "size_price_bands": [],
+      "flat_sizes_sold_sqft": [],
+      "market_context_snippets": [
+        "4 years 8 months promised",
+        "Possession date unchanged since launch",
+        "Since Dec 2025: booked 145 → 144 · structure 100% → 76% · final finishes 51% → 12%",
+        "All of the promised 4 years 8 months have passed",
+        "Its registered possession date is September 2026, unchanged since launch. Construction: excavation complete, structure (RCC) 76% complete, final finishes 12% complete. MahaRERA records do not show it as ready to move in.",
+        "144 of 174 units are booked (83%). Since the December 2025 update, the reported concrete structure (RCC) has gone from 100% to 76%. 80% of the flats sold here in 2025 went for ₹22,700 per sq ft or less (down 2% on 2024), counting balconies and terrace in the size, based on 13 registered sales we found. Buyers here paid a rate about 25% higher than at other Erandwane projects in 2025.",
+        "Prices in a project usually rise as construction progresses. Floor, view and flat size move the price up or down, so treat these figures as a guide."
+      ],
+      "progress_updates": [
+        {
+          "update_label": "Jul 2026",
+          "excavation_pct": 100.0,
+          "rcc_pct": 76.0,
+          "finishing_pct": 12.0,
+          "units_booked": 144,
+          "raw_row": [
+            "Jul 2026",
+            "100%",
+            "76%",
+            "12%",
+            "144"
+          ]
+        },
+        {
+          "update_label": "Dec 2025",
+          "excavation_pct": 100.0,
+          "rcc_pct": 100.0,
+          "finishing_pct": 51.0,
+          "units_booked": 145,
+          "raw_row": [
+            "Dec 2025",
+            "100%",
+            "100%",
+            "51%",
+            "145"
+          ]
+        },
+        {
+          "update_label": "Dec 2024",
+          "excavation_pct": 100.0,
+          "rcc_pct": 41.0,
+          "finishing_pct": 4.0,
+          "units_booked": 129,
+          "raw_row": [
+            "Dec 2024",
+            "100%",
+            "41%",
+            "4%",
+            "129"
+          ]
+        },
+        {
+          "update_label": "Jun 2024",
+          "excavation_pct": 100.0,
+          "rcc_pct": 10.0,
+          "finishing_pct": 0.0,
+          "units_booked": 120,
+          "raw_row": [
+            "Jun 2024",
+            "100%",
+            "10%",
+            "0%",
+            "120"
+          ]
+        },
+        {
+          "update_label": "Dec 2023",
+          "excavation_pct": 100.0,
+          "rcc_pct": 0.0,
+          "finishing_pct": 0.0,
+          "units_booked": 102,
+          "raw_row": [
+            "Dec 2023",
+            "100%",
+            "0%",
+            "0%",
+            "102"
+          ]
+        }
+      ],
+      "comparables": [],
+      "comparison_summary": [],
+      "related_project_links": [
+        {
+          "category": "other_phase",
+          "label": "Venkatesh Erandwane Central Building A2 Phase 3",
+          "url": "https://flatnama.com/pune/p52100055029-venkatesh-erandwane-central-building-a2-phase-3/"
+        },
+        {
+          "category": "other_phase",
+          "label": "Venkatesh Erandwane Central - BUILDING-B3 - Phase 4",
+          "url": "https://flatnama.com/pune/p52100032629-venkatesh-erandwane-central-building-b3-phase-4/"
+        },
+        {
+          "category": "other_phase",
+          "label": "Venkatesh Erandwane Central - BUILDING-B2 - Phase 3",
+          "url": "https://flatnama.com/pune/p52100032017-venkatesh-erandwane-central-building-b2-phase-3/"
+        },
+        {
+          "category": "other_phase",
+          "label": "Venkatesh Erandwane Central Building A1",
+          "url": "https://flatnama.com/pune/p52100031886-venkatesh-erandwane-central-building-a1/"
+        }
+      ],
+      "image_urls_metadata_only": [
+        "https://flatnama.com/pune/p52100032631-venkatesh-erandwane-central-building-b1-phase-2/share.png"
+      ],
+      "source_notes": {
+        "source": "FlatNama",
+        "data_basis": "Structured fields shown on the page; figures may reflect developer-reported MahaRERA submissions and available registered-sale records.",
+        "price_statistic_definition": "FlatNama describes its project price as the rate at or below which 80% of flats sold in the stated period went; it is not an individual transaction price.",
+        "collection_scope": "Limited, rate-limited collection of supplied pages; not a copy of the whole website.",
+        "limitations": [
+          "A page may not show every transaction.",
+          "Construction/bookings data may be developer-reported and may be revised.",
+          "No individual transaction-level sale deeds are extracted by this parser.",
+          "Fields not confidently parsed remain null instead of being guessed."
+        ]
+      },
+      "extraction_quality": {
+        "parser_version": "0.4.0",
+        "fields_checked": 22,
+        "fields_present": 18,
+        "field_presence": {
+          "rera_number": true,
+          "developer": true,
+          "locality": true,
+          "pin_code": true,
+          "launch_date_text": true,
+          "possession_date_text": true,
+          "maharera_status": true,
+          "total_units": true,
+          "units_booked": true,
+          "booking_pct": true,
+          "building_count": true,
+          "land_acres": true,
+          "price_per_sqft_80pct": true,
+          "latest_sale_count": true,
+          "flat_type_mix": true,
+          "flat_sizes_sold_sqft": false,
+          "size_price_bands": false,
+          "sale_year_stats": true,
+          "progress_updates": true,
+          "comparables": false,
+          "comparison_summary": false,
+          "map_url": true
+        },
+        "annual_price_rows": 1,
+        "unit_mix_rows": 2,
+        "flat_sizes_sold_count": 0,
+        "size_price_band_rows": 0,
+        "construction_update_rows": 5,
+        "comparable_rows": 0,
+        "comparison_summary_rows": 0,
+        "warnings": [
+          "only_one_annual_price_row_extracted_check_source_layout"
+        ]
+      }
+    },
+    {
+      "project_url": "https://flatnama.com/pune/p52100008687-45-nirvaana-hill-c2-wing/",
+      "page_title": "45 Nirvaana Hill - C2 Wing, Deccan: Possession Date & RERA",
+      "meta_description": "45 Nirvaana Hill - C2 Wing, Deccan, Pune 411004 (MahaRERA P52100008687): possession date June 2027, structure 68% complete. No paid listings, no calls.",
+      "project_name": "45 Nirvaana Hill - C2 Wing, Deccan",
+      "rera_number": "P52100008687",
+      "developer": "SINEW DEVELOPERS PRIVATE LIMITED",
+      "locality": "Deccan",
+      "pin_code": "411004",
+      "maharera_status": "Active",
+      "construction_stage": null,
+      "launch_date_text": "August 2017",
+      "promised_timeline_text": null,
+      "possession_date_text": "June 2027",
+      "original_possession_date_text": "December 2024",
+      "total_units": 121,
+      "units_for_sale": 121,
+      "units_booked": 61,
+      "not_for_sale_units": null,
+      "units_for_sale_derived_from_total_minus_not_for_sale": false,
+      "booking_status": "reported_count",
+      "booking_pct": 50.41,
+      "building_count": 121,
+      "land_acres": 0.4,
+      "excavation_pct": 100.0,
+      "rcc_pct": 68.0,
+      "finishing_pct": 50.0,
+      "complaint_count": 23,
+      "latest_sale_year": null,
+      "price_per_sqft_80pct": null,
+      "price_per_sqft_80pct_source": null,
+      "latest_sale_count": null,
+      "headline_price_per_sqft_80pct": null,
+      "headline_price_year_label": null,
+      "headline_price_sale_count": null,
+      "headline_price_raw_text": null,
+      "recent_bookings_count": null,
+      "reported_booking_denominator": 121,
+      "booking_pct_displayed": 50.0,
+      "price_area_basis": null,
+      "rate_vs_nearby_projects_pct": null,
+      "year_over_year_change_pct": null,
+      "year_over_year_comparison_year": null,
+      "possession_extension_months": null,
+      "possession_extension_note": null,
+      "map_url": "https://www.google.com/maps/search/?api=1&query=45+Nirvaana+Hill+-+C2+Wing+Deccan,+Pune+411004",
+      "flat_type_mix": [
+        {
+          "flat_type": "2 BHK",
+          "unit_count": 51
+        },
+        {
+          "flat_type": "3 BHK",
+          "unit_count": 43
+        },
+        {
+          "flat_type": "4 BHK",
+          "unit_count": 16
+        }
+      ],
+      "sale_year_stats": [],
+      "size_price_bands": [],
+      "flat_sizes_sold_sqft": [],
+      "market_context_snippets": [
+        "7 years 4 months originally promised",
+        "8 months away",
+        "Extended by 2 years 6 months (originally December 2024)",
+        "Since Dec 2025: complaints 21 → 23",
+        "All of the originally promised 7 years 4 months have passed",
+        "Its registered possession date is June 2027, extended by 2 years 6 months from the original December 2024. Construction: excavation complete, structure (RCC) 68% complete, final finishes 50% complete. MahaRERA records do not show it as ready to move in.",
+        "Prices in a project usually rise as construction progresses. Floor, view and flat size move the price up or down, so treat these figures as a guide."
+      ],
+      "progress_updates": [
+        {
+          "update_label": "Dec 2025",
+          "excavation_pct": 100.0,
+          "rcc_pct": 68.0,
+          "finishing_pct": 50.0,
+          "units_booked": 61,
+          "raw_row": [
+            "Dec 2025",
+            "100%",
+            "68%",
+            "50%",
+            "61"
+          ]
+        },
+        {
+          "update_label": "Dec 2024",
+          "excavation_pct": 100.0,
+          "rcc_pct": 68.0,
+          "finishing_pct": 50.0,
+          "units_booked": 59,
+          "raw_row": [
+            "Dec 2024",
+            "100%",
+            "68%",
+            "50%",
+            "59"
+          ]
+        },
+        {
+          "update_label": "Dec 2023",
+          "excavation_pct": 100.0,
+          "rcc_pct": 68.0,
+          "finishing_pct": 50.0,
+          "units_booked": 48,
+          "raw_row": [
+            "Dec 2023",
+            "100%",
+            "68%",
+            "50%",
+            "48"
+          ]
+        }
+      ],
+      "comparables": [],
+      "comparison_summary": [],
+      "related_project_links": [],
+      "image_urls_metadata_only": [
+        "https://flatnama.com/pune/p52100008687-45-nirvaana-hill-c2-wing/share.png"
+      ],
+      "source_notes": {
+        "source": "FlatNama",
+        "data_basis": "Structured fields shown on the page; figures may reflect developer-reported MahaRERA submissions and available registered-sale records.",
+        "price_statistic_definition": "FlatNama describes its project price as the rate at or below which 80% of flats sold in the stated period went; it is not an individual transaction price.",
+        "collection_scope": "Limited, rate-limited collection of supplied pages; not a copy of the whole website.",
+        "limitations": [
+          "A page may not show every transaction.",
+          "Construction/bookings data may be developer-reported and may be revised.",
+          "No individual transaction-level sale deeds are extracted by this parser.",
+          "Fields not confidently parsed remain null instead of being guessed."
+        ]
+      },
+      "extraction_quality": {
+        "parser_version": "0.4.0",
+        "fields_checked": 22,
+        "fields_present": 15,
+        "field_presence": {
+          "rera_number": true,
+          "developer": true,
+          "locality": true,
+          "pin_code": true,
+          "launch_date_text": true,
+          "possession_date_text": true,
+          "maharera_status": true,
+          "total_units": true,
+          "units_booked": true,
+          "booking_pct": true,
+          "building_count": true,
+          "land_acres": true,
+          "price_per_sqft_80pct": false,
+          "latest_sale_count": false,
+          "flat_type_mix": true,
+          "flat_sizes_sold_sqft": false,
+          "size_price_bands": false,
+          "sale_year_stats": false,
+          "progress_updates": true,
+          "comparables": false,
+          "comparison_summary": false,
+          "map_url": true
+        },
+        "annual_price_rows": 0,
+        "unit_mix_rows": 3,
+        "flat_sizes_sold_count": 0,
+        "size_price_band_rows": 0,
+        "construction_update_rows": 3,
+        "comparable_rows": 0,
+        "comparison_summary_rows": 0,
+        "warnings": []
+      }
+    },
+    {
+      "project_url": "https://flatnama.com/pune/p52100032017-venkatesh-erandwane-central-building-b2-phase-3/",
+      "page_title": "Venkatesh Erandwane Central - BUILDING-B2 - Phase 3",
+      "meta_description": "Venkatesh Erandwane Central - BUILDING-B2 - Phase 3, Erandwane: most flats sold for ₹23,700 per sq ft or less (incl. balconies and terrace) in 2026.",
+      "project_name": "Venkatesh Erandwane Central - BUILDING-B2 - Phase 3",
+      "rera_number": "P52100032017",
+      "developer": "SHREE VENKATESH BUILDCON PVT LTD",
+      "locality": "Erandwane",
+      "pin_code": "411004",
+      "maharera_status": "Active",
+      "construction_stage": null,
+      "launch_date_text": "December 2021",
+      "promised_timeline_text": "5 years promised",
+      "possession_date_text": "December 2026",
+      "original_possession_date_text": null,
+      "total_units": 114,
+      "units_for_sale": 114,
+      "units_booked": 69,
+      "not_for_sale_units": null,
+      "units_for_sale_derived_from_total_minus_not_for_sale": false,
+      "booking_status": "reported_count",
+      "booking_pct": 60.53,
+      "building_count": 114,
+      "land_acres": 1.0,
+      "excavation_pct": 100.0,
+      "rcc_pct": 62.0,
+      "finishing_pct": 12.0,
+      "complaint_count": 1,
+      "latest_sale_year": 2026,
+      "price_per_sqft_80pct": 23700.0,
+      "price_per_sqft_80pct_source": "annual_year_by_year",
+      "latest_sale_count": 11,
+      "headline_price_per_sqft_80pct": null,
+      "headline_price_year_label": null,
+      "headline_price_sale_count": null,
+      "headline_price_raw_text": null,
+      "recent_bookings_count": null,
+      "reported_booking_denominator": 114,
+      "booking_pct_displayed": 61.0,
+      "price_area_basis": "includes balconies and terrace",
+      "rate_vs_nearby_projects_pct": null,
+      "year_over_year_change_pct": 1.0,
+      "year_over_year_comparison_year": 2024,
+      "possession_extension_months": null,
+      "possession_extension_note": null,
+      "map_url": "https://www.google.com/maps/search/?api=1&query=Venkatesh+Erandwane+Central+-+BUILDING-B2+-+Phase+3+Erandwane,+Pune+411004",
+      "flat_type_mix": [
+        {
+          "flat_type": "1 RK",
+          "unit_count": 2
+        },
+        {
+          "flat_type": "2 BHK",
+          "unit_count": 1
+        },
+        {
+          "flat_type": "3 BHK",
+          "unit_count": 6
+        },
+        {
+          "flat_type": "4 BHK",
+          "unit_count": 105
+        }
+      ],
+      "sale_year_stats": [
+        {
+          "sales_year": 2025,
+          "year_label": "2025 up 1% on 2024",
+          "price_per_sqft_80pct": 23600.0,
+          "sale_count": 26,
+          "raw_row": [
+            "2025 up 1% on 2024",
+            "₹23,600 per sq ft",
+            "26 sales"
+          ]
+        },
+        {
+          "sales_year": 2026,
+          "year_label": "2026 so far about the same as 2025",
+          "price_per_sqft_80pct": 23700.0,
+          "sale_count": 11,
+          "raw_row": [
+            "2026 so far about the same as 2025",
+            "₹23,700 per sq ft",
+            "11 sales"
+          ]
+        }
+      ],
+      "size_price_bands": [
+        {
+          "year_label": "2026",
+          "min_size_sqft": 1670.0,
+          "max_size_sqft": 1670.0,
+          "min_price_inr": 36400000.0,
+          "max_price_inr": 39800000.0,
+          "raw_size_label": "1,670 sq ft",
+          "raw_price_label": "₹3.64 – 3.98 crore"
+        }
+      ],
+      "flat_sizes_sold_sqft": [],
+      "market_context_snippets": [
+        "5 years promised",
+        "2 months away",
+        "Possession date unchanged since launch",
+        "Since Dec 2025: booked 65 → 69 · structure 95% → 62% · final finishes 39% → 12% · complaints 0 → 1",
+        "up 1% on 2024",
+        "4 years 10 months of the promised 5 years have passed",
+        "Its registered possession date is December 2026, unchanged since launch. Construction: excavation complete, structure (RCC) 62% complete, final finishes 12% complete. MahaRERA records do not show it as ready to move in.",
+        "69 of 114 units are booked (61%). Since the December 2025 update, 4 more units have been booked and the reported concrete structure (RCC) has gone from 95% to 62%. 80% of the flats sold here in 2026 so far went for ₹23,700 per sq ft or less (about the same as 2025), counting balconies and terrace in the size, based on 11 registered sales we found. Buyers here paid a rate about 10% higher than at other Erandwane projects in 2026. Most buyers paid ₹3.64–3.98 crore for flats of 1,670 sq ft.",
+        "Prices in a project usually rise as construction progresses. Floor, view and flat size move the price up or down, so treat these figures as a guide."
+      ],
+      "progress_updates": [
+        {
+          "update_label": "Jul 2026",
+          "excavation_pct": 100.0,
+          "rcc_pct": 62.0,
+          "finishing_pct": 12.0,
+          "units_booked": 69,
+          "raw_row": [
+            "Jul 2026",
+            "100%",
+            "62%",
+            "12%",
+            "69"
+          ]
+        },
+        {
+          "update_label": "Dec 2025",
+          "excavation_pct": 100.0,
+          "rcc_pct": 95.0,
+          "finishing_pct": 39.0,
+          "units_booked": 65,
+          "raw_row": [
+            "Dec 2025",
+            "100%",
+            "95%",
+            "39%",
+            "65"
+          ]
+        },
+        {
+          "update_label": "Dec 2024",
+          "excavation_pct": 100.0,
+          "rcc_pct": 32.0,
+          "finishing_pct": 4.0,
+          "units_booked": 44,
+          "raw_row": [
+            "Dec 2024",
+            "100%",
+            "32%",
+            "4%",
+            "44"
+          ]
+        },
+        {
+          "update_label": "Jun 2024",
+          "excavation_pct": 100.0,
+          "rcc_pct": 10.0,
+          "finishing_pct": 0.0,
+          "units_booked": 31,
+          "raw_row": [
+            "Jun 2024",
+            "100%",
+            "10%",
+            "0%",
+            "31"
+          ]
+        },
+        {
+          "update_label": "Dec 2023",
+          "excavation_pct": 100.0,
+          "rcc_pct": 0.0,
+          "finishing_pct": 0.0,
+          "units_booked": 25,
+          "raw_row": [
+            "Dec 2023",
+            "100%",
+            "0%",
+            "0%",
+            "25"
+          ]
+        }
+      ],
+      "comparables": [],
+      "comparison_summary": [],
+      "related_project_links": [
+        {
+          "category": "other_phase",
+          "label": "Venkatesh Erandwane Central Building A2 Phase 3",
+          "url": "https://flatnama.com/pune/p52100055029-venkatesh-erandwane-central-building-a2-phase-3/"
+        },
+        {
+          "category": "other_phase",
+          "label": "Venkatesh Erandwane Central - BUILDING-B1 - Phase 2",
+          "url": "https://flatnama.com/pune/p52100032631-venkatesh-erandwane-central-building-b1-phase-2/"
+        },
+        {
+          "category": "other_phase",
+          "label": "Venkatesh Erandwane Central - BUILDING-B3 - Phase 4",
+          "url": "https://flatnama.com/pune/p52100032629-venkatesh-erandwane-central-building-b3-phase-4/"
+        },
+        {
+          "category": "other_phase",
+          "label": "Venkatesh Erandwane Central Building A1",
+          "url": "https://flatnama.com/pune/p52100031886-venkatesh-erandwane-central-building-a1/"
+        }
+      ],
+      "image_urls_metadata_only": [
+        "https://flatnama.com/pune/p52100032017-venkatesh-erandwane-central-building-b2-phase-3/share.png"
+      ],
+      "source_notes": {
+        "source": "FlatNama",
+        "data_basis": "Structured fields shown on the page; figures may reflect developer-reported MahaRERA submissions and available registered-sale records.",
+        "price_statistic_definition": "FlatNama describes its project price as the rate at or below which 80% of flats sold in the stated period went; it is not an individual transaction price.",
+        "collection_scope": "Limited, rate-limited collection of supplied pages; not a copy of the whole website.",
+        "limitations": [
+          "A page may not show every transaction.",
+          "Construction/bookings data may be developer-reported and may be revised.",
+          "No individual transaction-level sale deeds are extracted by this parser.",
+          "Fields not confidently parsed remain null instead of being guessed."
+        ]
+      },
+      "extraction_quality": {
+        "parser_version": "0.4.0",
+        "fields_checked": 22,
+        "fields_present": 19,
+        "field_presence": {
+          "rera_number": true,
+          "developer": true,
+          "locality": true,
+          "pin_code": true,
+          "launch_date_text": true,
+          "possession_date_text": true,
+          "maharera_status": true,
+          "total_units": true,
+          "units_booked": true,
+          "booking_pct": true,
+          "building_count": true,
+          "land_acres": true,
+          "price_per_sqft_80pct": true,
+          "latest_sale_count": true,
+          "flat_type_mix": true,
+          "flat_sizes_sold_sqft": false,
+          "size_price_bands": true,
+          "sale_year_stats": true,
+          "progress_updates": true,
+          "comparables": false,
+          "comparison_summary": false,
+          "map_url": true
+        },
+        "annual_price_rows": 2,
+        "unit_mix_rows": 4,
+        "flat_sizes_sold_count": 0,
+        "size_price_band_rows": 1,
+        "construction_update_rows": 5,
+        "comparable_rows": 0,
+        "comparison_summary_rows": 0,
+        "warnings": []
+      }
+    },
+    {
+      "project_url": "https://flatnama.com/pune/p52100032629-venkatesh-erandwane-central-building-b3-phase-4/",
+      "page_title": "Venkatesh Erandwane Central - BUILDING-B3 - Phase 4",
+      "meta_description": "Venkatesh Erandwane Central - BUILDING-B3 - Phase 4, Erandwane: most flats sold for ₹23,800 per sq ft or less (incl. balconies and terrace) in 2026.",
+      "project_name": "Venkatesh Erandwane Central - BUILDING-B3 - Phase 4",
+      "rera_number": "P52100032629",
+      "developer": "SHREE VENKATESH BUILDCON PVT LTD",
+      "locality": "Erandwane",
+      "pin_code": "411004",
+      "maharera_status": "Active",
+      "construction_stage": null,
+      "launch_date_text": "January 2022",
+      "promised_timeline_text": "4 years 8 months promised",
+      "possession_date_text": "September 2026",
+      "original_possession_date_text": null,
+      "total_units": 114,
+      "units_for_sale": 114,
+      "units_booked": 74,
+      "not_for_sale_units": null,
+      "units_for_sale_derived_from_total_minus_not_for_sale": false,
+      "booking_status": "reported_count",
+      "booking_pct": 64.91,
+      "building_count": 114,
+      "land_acres": 1.0,
+      "excavation_pct": 100.0,
+      "rcc_pct": 100.0,
+      "finishing_pct": 58.0,
+      "complaint_count": 1,
+      "latest_sale_year": 2026,
+      "price_per_sqft_80pct": 23800.0,
+      "price_per_sqft_80pct_source": "annual_year_by_year",
+      "latest_sale_count": 19,
+      "headline_price_per_sqft_80pct": null,
+      "headline_price_year_label": null,
+      "headline_price_sale_count": null,
+      "headline_price_raw_text": null,
+      "recent_bookings_count": null,
+      "reported_booking_denominator": 114,
+      "booking_pct_displayed": 65.0,
+      "price_area_basis": "includes balconies and terrace",
+      "rate_vs_nearby_projects_pct": null,
+      "year_over_year_change_pct": 5.0,
+      "year_over_year_comparison_year": 2025,
+      "possession_extension_months": null,
+      "possession_extension_note": null,
+      "map_url": "https://www.google.com/maps/search/?api=1&query=Venkatesh+Erandwane+Central+-+BUILDING-B3+-+Phase+4+Erandwane,+Pune+411004",
+      "flat_type_mix": [
+        {
+          "flat_type": "1 RK",
+          "unit_count": 2
+        },
+        {
+          "flat_type": "2 BHK",
+          "unit_count": 60
+        },
+        {
+          "flat_type": "3 BHK",
+          "unit_count": 52
+        }
+      ],
+      "sale_year_stats": [
+        {
+          "sales_year": 2025,
+          "year_label": "2025 down 2% on 2024",
+          "price_per_sqft_80pct": 22700.0,
+          "sale_count": 42,
+          "raw_row": [
+            "2025 down 2% on 2024",
+            "₹22,700 per sq ft",
+            "42 sales"
+          ]
+        },
+        {
+          "sales_year": 2026,
+          "year_label": "2026 so far up 5% on 2025",
+          "price_per_sqft_80pct": 23800.0,
+          "sale_count": 19,
+          "raw_row": [
+            "2026 so far up 5% on 2025",
+            "₹23,800 per sq ft",
+            "19 sales"
+          ]
+        }
+      ],
+      "size_price_bands": [
+        {
+          "year_label": "2026",
+          "min_size_sqft": 1370.0,
+          "max_size_sqft": 1370.0,
+          "min_price_inr": 27200000.0,
+          "max_price_inr": 32800000.0,
+          "raw_size_label": "1,370 sq ft",
+          "raw_price_label": "₹2.72 – 3.28 crore"
+        }
+      ],
+      "flat_sizes_sold_sqft": [],
+      "market_context_snippets": [
+        "4 years 8 months promised",
+        "Possession date unchanged since launch",
+        "up 5% on 2025",
+        "Since Dec 2025: final finishes 44% → 58% · complaints 0 → 1",
+        "up 5% on 2025",
+        "All of the promised 4 years 8 months have passed",
+        "Its registered possession date is September 2026, unchanged since launch. Construction: excavation complete, structure (RCC) complete, final finishes 58% complete. MahaRERA records do not show it as ready to move in.",
+        "74 of 114 units are booked (65%). 80% of the flats sold here in 2026 so far went for ₹23,800 per sq ft or less (up 5% on 2025), counting balconies and terrace in the size, based on 19 registered sales we found. Buyers here paid a rate about 10% higher than at other Erandwane projects in 2026. Most buyers paid ₹2.72–3.28 crore for flats of 1,370 sq ft.",
+        "Prices in a project usually rise as construction progresses. Floor, view and flat size move the price up or down, so treat these figures as a guide."
+      ],
+      "progress_updates": [
+        {
+          "update_label": "Jul 2026",
+          "excavation_pct": 100.0,
+          "rcc_pct": 100.0,
+          "finishing_pct": 58.0,
+          "units_booked": 74,
+          "raw_row": [
+            "Jul 2026",
+            "100%",
+            "100%",
+            "58%",
+            "74"
+          ]
+        },
+        {
+          "update_label": "Dec 2025",
+          "excavation_pct": 100.0,
+          "rcc_pct": 100.0,
+          "finishing_pct": 44.0,
+          "units_booked": 74,
+          "raw_row": [
+            "Dec 2025",
+            "100%",
+            "100%",
+            "44%",
+            "74"
+          ]
+        },
+        {
+          "update_label": "Dec 2024",
+          "excavation_pct": 100.0,
+          "rcc_pct": 65.0,
+          "finishing_pct": 4.0,
+          "units_booked": 29,
+          "raw_row": [
+            "Dec 2024",
+            "100%",
+            "65%",
+            "4%",
+            "29"
+          ]
+        },
+        {
+          "update_label": "Jun 2024",
+          "excavation_pct": 100.0,
+          "rcc_pct": 22.0,
+          "finishing_pct": 0.0,
+          "units_booked": 17,
+          "raw_row": [
+            "Jun 2024",
+            "100%",
+            "22%",
+            "0%",
+            "17"
+          ]
+        },
+        {
+          "update_label": "Dec 2023",
+          "excavation_pct": 100.0,
+          "rcc_pct": 0.0,
+          "finishing_pct": 0.0,
+          "units_booked": null,
+          "raw_row": [
+            "Dec 2023",
+            "100%",
+            "0%",
+            "0%",
+            "—"
+          ]
+        }
+      ],
+      "comparables": [],
+      "comparison_summary": [],
+      "related_project_links": [
+        {
+          "category": "other_phase",
+          "label": "Venkatesh Erandwane Central Building A2 Phase 3",
+          "url": "https://flatnama.com/pune/p52100055029-venkatesh-erandwane-central-building-a2-phase-3/"
+        },
+        {
+          "category": "other_phase",
+          "label": "Venkatesh Erandwane Central - BUILDING-B1 - Phase 2",
+          "url": "https://flatnama.com/pune/p52100032631-venkatesh-erandwane-central-building-b1-phase-2/"
+        },
+        {
+          "category": "other_phase",
+          "label": "Venkatesh Erandwane Central - BUILDING-B2 - Phase 3",
+          "url": "https://flatnama.com/pune/p52100032017-venkatesh-erandwane-central-building-b2-phase-3/"
+        },
+        {
+          "category": "other_phase",
+          "label": "Venkatesh Erandwane Central Building A1",
+          "url": "https://flatnama.com/pune/p52100031886-venkatesh-erandwane-central-building-a1/"
+        }
+      ],
+      "image_urls_metadata_only": [
+        "https://flatnama.com/pune/p52100032629-venkatesh-erandwane-central-building-b3-phase-4/share.png"
+      ],
+      "source_notes": {
+        "source": "FlatNama",
+        "data_basis": "Structured fields shown on the page; figures may reflect developer-reported MahaRERA submissions and available registered-sale records.",
+        "price_statistic_definition": "FlatNama describes its project price as the rate at or below which 80% of flats sold in the stated period went; it is not an individual transaction price.",
+        "collection_scope": "Limited, rate-limited collection of supplied pages; not a copy of the whole website.",
+        "limitations": [
+          "A page may not show every transaction.",
+          "Construction/bookings data may be developer-reported and may be revised.",
+          "No individual transaction-level sale deeds are extracted by this parser.",
+          "Fields not confidently parsed remain null instead of being guessed."
+        ]
+      },
+      "extraction_quality": {
+        "parser_version": "0.4.0",
+        "fields_checked": 22,
+        "fields_present": 19,
+        "field_presence": {
+          "rera_number": true,
+          "developer": true,
+          "locality": true,
+          "pin_code": true,
+          "launch_date_text": true,
+          "possession_date_text": true,
+          "maharera_status": true,
+          "total_units": true,
+          "units_booked": true,
+          "booking_pct": true,
+          "building_count": true,
+          "land_acres": true,
+          "price_per_sqft_80pct": true,
+          "latest_sale_count": true,
+          "flat_type_mix": true,
+          "flat_sizes_sold_sqft": false,
+          "size_price_bands": true,
+          "sale_year_stats": true,
+          "progress_updates": true,
+          "comparables": false,
+          "comparison_summary": false,
+          "map_url": true
+        },
+        "annual_price_rows": 2,
+        "unit_mix_rows": 3,
+        "flat_sizes_sold_count": 0,
+        "size_price_band_rows": 1,
+        "construction_update_rows": 5,
+        "comparable_rows": 0,
+        "comparison_summary_rows": 0,
+        "warnings": []
+      }
+    },
+    {
+      "project_url": "https://flatnama.com/pune/p52100031886-venkatesh-erandwane-central-building-a1/",
+      "page_title": "Venkatesh Erandwane Central Building A1: RERA Details",
+      "meta_description": "Venkatesh Erandwane Central Building A1, Erandwane, Pune 411004: most flats sold for ₹21,700 per sq ft or less (incl. balconies and terrace) in 2026.",
+      "project_name": "Venkatesh Erandwane Central Building A1",
+      "rera_number": "P52100031886",
+      "developer": "SHREE VENKATESH BUILDCON PVT LTD",
+      "locality": "Erandwane",
+      "pin_code": "411004",
+      "maharera_status": "Active",
+      "construction_stage": null,
+      "launch_date_text": "November 2021",
+      "promised_timeline_text": "5 years 4 months promised",
+      "possession_date_text": "March 2027",
+      "original_possession_date_text": null,
+      "total_units": 104,
+      "units_for_sale": 104,
+      "units_booked": 65,
+      "not_for_sale_units": null,
+      "units_for_sale_derived_from_total_minus_not_for_sale": false,
+      "booking_status": "reported_count",
+      "booking_pct": 62.5,
+      "building_count": 104,
+      "land_acres": 1.0,
+      "excavation_pct": 100.0,
+      "rcc_pct": 85.0,
+      "finishing_pct": 12.0,
+      "complaint_count": 1,
+      "latest_sale_year": 2026,
+      "price_per_sqft_80pct": 21700.0,
+      "price_per_sqft_80pct_source": "annual_year_by_year",
+      "latest_sale_count": 12,
+      "headline_price_per_sqft_80pct": null,
+      "headline_price_year_label": null,
+      "headline_price_sale_count": null,
+      "headline_price_raw_text": null,
+      "recent_bookings_count": null,
+      "reported_booking_denominator": 104,
+      "booking_pct_displayed": 63.0,
+      "price_area_basis": "includes balconies and terrace",
+      "rate_vs_nearby_projects_pct": null,
+      "year_over_year_change_pct": 3.0,
+      "year_over_year_comparison_year": 2025,
+      "possession_extension_months": null,
+      "possession_extension_note": null,
+      "map_url": "https://www.google.com/maps/search/?api=1&query=Venkatesh+Erandwane+Central+Building+A1+Erandwane,+Pune+411004",
+      "flat_type_mix": [
+        {
+          "flat_type": "2 BHK",
+          "unit_count": 50
+        },
+        {
+          "flat_type": "3 BHK",
+          "unit_count": 52
+        }
+      ],
+      "sale_year_stats": [
+        {
+          "sales_year": 2025,
+          "year_label": "2025 up 1% on 2024",
+          "price_per_sqft_80pct": 21100.0,
+          "sale_count": 18,
+          "raw_row": [
+            "2025 up 1% on 2024",
+            "₹21,100 per sq ft",
+            "18 sales"
+          ]
+        },
+        {
+          "sales_year": 2026,
+          "year_label": "2026 so far up 3% on 2025",
+          "price_per_sqft_80pct": 21700.0,
+          "sale_count": 12,
+          "raw_row": [
+            "2026 so far up 3% on 2025",
+            "₹21,700 per sq ft",
+            "12 sales"
+          ]
+        }
+      ],
+      "size_price_bands": [
+        {
+          "year_label": "2026",
+          "min_size_sqft": 1150.0,
+          "max_size_sqft": 1230.0,
+          "min_price_inr": 21800000.0,
+          "max_price_inr": 26800000.0,
+          "raw_size_label": "1,150 – 1,230 sq ft",
+          "raw_price_label": "₹2.18 – 2.68 crore"
+        }
+      ],
+      "flat_sizes_sold_sqft": [],
+      "market_context_snippets": [
+        "5 years 4 months promised",
+        "5 months away",
+        "Possession date unchanged since launch",
+        "up 3% on 2025",
+        "Since Dec 2025: booked 64 → 65 · structure 60% → 85% · final finishes 10% → 12% · complaints 0 → 1",
+        "up 1% on 2024",
+        "up 3% on 2025",
+        "4 years 11 months of the promised 5 years 4 months have passed",
+        "Its registered possession date is March 2027, unchanged since launch. Construction: excavation complete, structure (RCC) 85% complete, final finishes 12% complete. MahaRERA records do not show it as ready to move in.",
+        "65 of 104 units are booked (63%). Since the December 2025 update, 1 more unit has been booked and the reported concrete structure (RCC) has gone from 60% to 85%. 80% of the flats sold here in 2026 so far went for ₹21,700 per sq ft or less (up 3% on 2025), counting balconies and terrace in the size, based on 12 registered sales we found. Buyers here paid a rate similar to other Erandwane projects in 2026. Most buyers paid ₹2.18–2.68 crore for flats of 1,150–1,230 sq ft.",
+        "Prices in a project usually rise as construction progresses. Floor, view and flat size move the price up or down, so treat these figures as a guide."
+      ],
+      "progress_updates": [
+        {
+          "update_label": "Jul 2026",
+          "excavation_pct": 100.0,
+          "rcc_pct": 85.0,
+          "finishing_pct": 12.0,
+          "units_booked": 65,
+          "raw_row": [
+            "Jul 2026",
+            "100%",
+            "85%",
+            "12%",
+            "65"
+          ]
+        },
+        {
+          "update_label": "Dec 2025",
+          "excavation_pct": 100.0,
+          "rcc_pct": 60.0,
+          "finishing_pct": 10.0,
+          "units_booked": 64,
+          "raw_row": [
+            "Dec 2025",
+            "100%",
+            "60%",
+            "10%",
+            "64"
+          ]
+        },
+        {
+          "update_label": "Dec 2024",
+          "excavation_pct": 100.0,
+          "rcc_pct": 0.0,
+          "finishing_pct": 0.0,
+          "units_booked": 47,
+          "raw_row": [
+            "Dec 2024",
+            "100%",
+            "0%",
+            "0%",
+            "47"
+          ]
+        },
+        {
+          "update_label": "Jun 2024",
+          "excavation_pct": 100.0,
+          "rcc_pct": 0.0,
+          "finishing_pct": 0.0,
+          "units_booked": 26,
+          "raw_row": [
+            "Jun 2024",
+            "100%",
+            "0%",
+            "0%",
+            "26"
+          ]
+        },
+        {
+          "update_label": "Dec 2023",
+          "excavation_pct": 55.0,
+          "rcc_pct": 0.0,
+          "finishing_pct": 0.0,
+          "units_booked": null,
+          "raw_row": [
+            "Dec 2023",
+            "55%",
+            "0%",
+            "0%",
+            "—"
+          ]
+        }
+      ],
+      "comparables": [],
+      "comparison_summary": [],
+      "related_project_links": [
+        {
+          "category": "other_phase",
+          "label": "Venkatesh Erandwane Central Building A2 Phase 3",
+          "url": "https://flatnama.com/pune/p52100055029-venkatesh-erandwane-central-building-a2-phase-3/"
+        },
+        {
+          "category": "other_phase",
+          "label": "Venkatesh Erandwane Central - BUILDING-B1 - Phase 2",
+          "url": "https://flatnama.com/pune/p52100032631-venkatesh-erandwane-central-building-b1-phase-2/"
+        },
+        {
+          "category": "other_phase",
+          "label": "Venkatesh Erandwane Central - BUILDING-B3 - Phase 4",
+          "url": "https://flatnama.com/pune/p52100032629-venkatesh-erandwane-central-building-b3-phase-4/"
+        },
+        {
+          "category": "other_phase",
+          "label": "Venkatesh Erandwane Central - BUILDING-B2 - Phase 3",
+          "url": "https://flatnama.com/pune/p52100032017-venkatesh-erandwane-central-building-b2-phase-3/"
+        }
+      ],
+      "image_urls_metadata_only": [
+        "https://flatnama.com/pune/p52100031886-venkatesh-erandwane-central-building-a1/share.png"
+      ],
+      "source_notes": {
+        "source": "FlatNama",
+        "data_basis": "Structured fields shown on the page; figures may reflect developer-reported MahaRERA submissions and available registered-sale records.",
+        "price_statistic_definition": "FlatNama describes its project price as the rate at or below which 80% of flats sold in the stated period went; it is not an individual transaction price.",
+        "collection_scope": "Limited, rate-limited collection of supplied pages; not a copy of the whole website.",
+        "limitations": [
+          "A page may not show every transaction.",
+          "Construction/bookings data may be developer-reported and may be revised.",
+          "No individual transaction-level sale deeds are extracted by this parser.",
+          "Fields not confidently parsed remain null instead of being guessed."
+        ]
+      },
+      "extraction_quality": {
+        "parser_version": "0.4.0",
+        "fields_checked": 22,
+        "fields_present": 19,
+        "field_presence": {
+          "rera_number": true,
+          "developer": true,
+          "locality": true,
+          "pin_code": true,
+          "launch_date_text": true,
+          "possession_date_text": true,
+          "maharera_status": true,
+          "total_units": true,
+          "units_booked": true,
+          "booking_pct": true,
+          "building_count": true,
+          "land_acres": true,
+          "price_per_sqft_80pct": true,
+          "latest_sale_count": true,
+          "flat_type_mix": true,
+          "flat_sizes_sold_sqft": false,
+          "size_price_bands": true,
+          "sale_year_stats": true,
+          "progress_updates": true,
+          "comparables": false,
+          "comparison_summary": false,
+          "map_url": true
+        },
+        "annual_price_rows": 2,
+        "unit_mix_rows": 2,
+        "flat_sizes_sold_count": 0,
+        "size_price_band_rows": 1,
+        "construction_update_rows": 5,
+        "comparable_rows": 0,
+        "comparison_summary_rows": 0,
+        "warnings": []
+      }
+    },
+    {
+      "project_url": "https://flatnama.com/pune/p52100055029-venkatesh-erandwane-central-building-a2-phase-3/",
+      "page_title": "Venkatesh Erandwane Central Building A2 Phase 3",
+      "meta_description": "Venkatesh Erandwane Central Building A2 Phase 3, Erandwane, Pune 411004: most flats sold for ₹21,200 per sq ft or less (incl. balconies and terrace) in 2026.",
+      "project_name": "Venkatesh Erandwane Central Building A2 Phase 3",
+      "rera_number": "P52100055029",
+      "developer": "SHREE VENKATESH BUILDCON PVT LTD",
+      "locality": "Erandwane",
+      "pin_code": "411004",
+      "maharera_status": "Active",
+      "construction_stage": null,
+      "launch_date_text": "February 2024",
+      "promised_timeline_text": "3 years 4 months promised",
+      "possession_date_text": "June 2027",
+      "original_possession_date_text": null,
+      "total_units": 104,
+      "units_for_sale": 57,
+      "units_booked": 57,
+      "not_for_sale_units": null,
+      "units_for_sale_derived_from_total_minus_not_for_sale": false,
+      "booking_status": "all_booked",
+      "booking_pct": 100.0,
+      "building_count": 104,
+      "land_acres": 1.0,
+      "excavation_pct": 100.0,
+      "rcc_pct": 60.0,
+      "finishing_pct": 12.0,
+      "complaint_count": 4,
+      "latest_sale_year": 2026,
+      "price_per_sqft_80pct": 21200.0,
+      "price_per_sqft_80pct_source": "annual_year_by_year",
+      "latest_sale_count": 53,
+      "headline_price_per_sqft_80pct": null,
+      "headline_price_year_label": null,
+      "headline_price_sale_count": null,
+      "headline_price_raw_text": null,
+      "recent_bookings_count": null,
+      "reported_booking_denominator": 104,
+      "booking_pct_displayed": 55.0,
+      "price_area_basis": "includes balconies and terrace",
+      "rate_vs_nearby_projects_pct": null,
+      "year_over_year_change_pct": 3.0,
+      "year_over_year_comparison_year": 2025,
+      "possession_extension_months": null,
+      "possession_extension_note": "Possession date extended",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=Venkatesh+Erandwane+Central+Building+A2+Phase+3+Erandwane,+Pune+411004",
+      "flat_type_mix": [
+        {
+          "flat_type": "2 BHK",
+          "unit_count": 58
+        },
+        {
+          "flat_type": "3 BHK",
+          "unit_count": 46
+        }
+      ],
+      "sale_year_stats": [
+        {
+          "sales_year": 2026,
+          "year_label": "2026 so far up 3% on 2025",
+          "price_per_sqft_80pct": 21200.0,
+          "sale_count": 53,
+          "raw_row": [
+            "2026 so far up 3% on 2025",
+            "₹21,200 per sq ft",
+            "53 sales"
+          ]
+        }
+      ],
+      "size_price_bands": [
+        {
+          "year_label": "2026",
+          "min_size_sqft": 1160.0,
+          "max_size_sqft": 1170.0,
+          "min_price_inr": 23200000.0,
+          "max_price_inr": 24500000.0,
+          "raw_size_label": "1,160 – 1,170 sq ft",
+          "raw_price_label": "₹2.32 – 2.45 crore"
+        },
+        {
+          "year_label": "2026",
+          "min_size_sqft": 1240.0,
+          "max_size_sqft": 1240.0,
+          "min_price_inr": 24000000.0,
+          "max_price_inr": 26800000.0,
+          "raw_size_label": "1,240 sq ft",
+          "raw_price_label": "₹2.40 – 2.68 crore"
+        }
+      ],
+      "flat_sizes_sold_sqft": [],
+      "market_context_snippets": [
+        "3 years 4 months promised",
+        "8 months away",
+        "Possession date unchanged since launch",
+        "up 3% on 2025",
+        "Since Dec 2025: booked 25 → 57 · structure 40% → 60% · final finishes 9% → 12% · total units 48 → 104 · complaints 0 → 4",
+        "up 3% on 2025",
+        "Promised timeline (launch to possession)",
+        "Possession date extended",
+        "2 years 8 months of the promised 3 years 4 months have passed",
+        "Its registered possession date is June 2027, unchanged since launch. Construction: excavation complete, structure (RCC) 60% complete, final finishes 12% complete. MahaRERA records do not show it as ready to move in.",
+        "57 of 104 units are booked (55%). Since the December 2025 update, 32 more units have been booked and the reported concrete structure (RCC) has gone from 40% to 60%. 80% of the flats sold here in 2026 so far went for ₹21,200 per sq ft or less (up 3% on 2025), counting balconies and terrace in the size, based on 53 registered sales we found. Buyers here paid a rate similar to other Erandwane projects in 2026. Most buyers paid ₹2.32–2.45 crore for flats of 1,160–1,170 sq ft and ₹2.40–2.68 crore for 1,240 sq ft.",
+        "Prices in a project usually rise as construction progresses. Floor, view and flat size move the price up or down, so treat these figures as a guide."
+      ],
+      "progress_updates": [
+        {
+          "update_label": "Jul 2026",
+          "excavation_pct": 100.0,
+          "rcc_pct": 60.0,
+          "finishing_pct": 12.0,
+          "units_booked": 57,
+          "raw_row": [
+            "Jul 2026",
+            "100%",
+            "60%",
+            "12%",
+            "57"
+          ]
+        },
+        {
+          "update_label": "Dec 2025",
+          "excavation_pct": 100.0,
+          "rcc_pct": 40.0,
+          "finishing_pct": 9.0,
+          "units_booked": 25,
+          "raw_row": [
+            "Dec 2025",
+            "100%",
+            "40%",
+            "9%",
+            "25"
+          ]
+        },
+        {
+          "update_label": "Jun 2024",
+          "excavation_pct": 100.0,
+          "rcc_pct": 0.0,
+          "finishing_pct": 0.0,
+          "units_booked": null,
+          "raw_row": [
+            "Jun 2024",
+            "100%",
+            "0%",
+            "0%",
+            "—"
+          ]
+        }
+      ],
+      "comparables": [
+        {
+          "comparable_name": "Erandwane Business Zone",
+          "launch_date_text": "June 2024",
+          "possession_date_text": "March 2027",
+          "rcc_pct": 100.0,
+          "booking_text": "19 of 91 units booked (21%)",
+          "raw_row": [
+            "Erandwane Business Zone",
+            "June 2024",
+            "March 2027",
+            "100%",
+            "19 of 91 units booked (21%)"
+          ]
+        },
+        {
+          "comparable_name": "Chandrabhaga",
+          "launch_date_text": "October 2024",
+          "possession_date_text": "February 2028",
+          "rcc_pct": 15.0,
+          "booking_text": "16 of 31 units booked (52%)",
+          "raw_row": [
+            "Chandrabhaga",
+            "October 2024",
+            "February 2028",
+            "15%",
+            "16 of 31 units booked (52%)"
+          ]
+        },
+        {
+          "comparable_name": "Yashodhan Co-operative Housing Society",
+          "launch_date_text": "October 2024",
+          "possession_date_text": "March 2028",
+          "rcc_pct": 60.0,
+          "booking_text": "8 of 24 units booked (33%)",
+          "raw_row": [
+            "Yashodhan Co-operative Housing Society",
+            "October 2024",
+            "March 2028",
+            "60%",
+            "8 of 24 units booked (33%)"
+          ]
+        },
+        {
+          "comparable_name": "State Bank of India Employees Himgauri Co Operative Housing Society Ltd",
+          "launch_date_text": "May 2023",
+          "possession_date_text": "September 2026",
+          "rcc_pct": 100.0,
+          "booking_text": "All units for sale are booked (34 booked)",
+          "raw_row": [
+            "State Bank of India Employees Himgauri Co Operative Housing Society Ltd",
+            "May 2023",
+            "September 2026",
+            "100%",
+            "All units for sale are booked (34 booked)"
+          ]
+        }
+      ],
+      "comparison_summary": [
+        {
+          "measure": "Promised timeline (launch to possession)",
+          "this_project": "3 yrs 4 mths",
+          "similar_projects": "3 yrs 2 mths",
+          "raw_row": [
+            "Promised timeline (launch to possession)",
+            "3 yrs 4 mths",
+            "3 yrs 2 mths"
+          ]
+        },
+        {
+          "measure": "Possession date extended",
+          "this_project": "No",
+          "similar_projects": "1 of 4",
+          "raw_row": [
+            "Possession date extended",
+            "No",
+            "1 of 4"
+          ]
+        },
+        {
+          "measure": "Possession date (MahaRERA)",
+          "this_project": "June 2027",
+          "similar_projects": "September 2027",
+          "raw_row": [
+            "Possession date (MahaRERA)",
+            "June 2027",
+            "September 2027"
+          ]
+        },
+        {
+          "measure": "Concrete structure (RCC) complete",
+          "this_project": "60%",
+          "similar_projects": "80%",
+          "raw_row": [
+            "Concrete structure (RCC) complete",
+            "60%",
+            "80%"
+          ]
+        },
+        {
+          "measure": "Share of units for sale that are booked",
+          "this_project": "55%",
+          "similar_projects": "42%",
+          "raw_row": [
+            "Share of units for sale that are booked",
+            "55%",
+            "42%"
+          ]
+        },
+        {
+          "measure": "Complaints on MahaRERA (filed by or against the builder)",
+          "this_project": "4",
+          "similar_projects": "0",
+          "raw_row": [
+            "Complaints on MahaRERA (filed by or against the builder)",
+            "4",
+            "0"
+          ]
+        }
+      ],
+      "related_project_links": [
+        {
+          "category": "comparable_project",
+          "label": "Erandwane Business Zone",
+          "url": "https://flatnama.com/pune/p52100066479-erandwane-business-zone/"
+        },
+        {
+          "category": "comparable_project",
+          "label": "Chandrabhaga",
+          "url": "https://flatnama.com/pune/p52100077614-chandrabhaga/"
+        },
+        {
+          "category": "comparable_project",
+          "label": "Yashodhan Co-operative Housing Society",
+          "url": "https://flatnama.com/pune/pm1260002400079-yashodhan-co-operative-housing-society/"
+        },
+        {
+          "category": "comparable_project",
+          "label": "State Bank of India Employees Himgauri Co Operative Housing Society Ltd",
+          "url": "https://flatnama.com/pune/p52100050860-state-bank-of-india-employees-himgauri-co-operative-housing-society-ltd/"
+        },
+        {
+          "category": "other_phase",
+          "label": "Venkatesh Erandwane Central - BUILDING-B1 - Phase 2",
+          "url": "https://flatnama.com/pune/p52100032631-venkatesh-erandwane-central-building-b1-phase-2/"
+        },
+        {
+          "category": "other_phase",
+          "label": "Venkatesh Erandwane Central - BUILDING-B3 - Phase 4",
+          "url": "https://flatnama.com/pune/p52100032629-venkatesh-erandwane-central-building-b3-phase-4/"
+        },
+        {
+          "category": "other_phase",
+          "label": "Venkatesh Erandwane Central - BUILDING-B2 - Phase 3",
+          "url": "https://flatnama.com/pune/p52100032017-venkatesh-erandwane-central-building-b2-phase-3/"
+        },
+        {
+          "category": "other_phase",
+          "label": "Venkatesh Erandwane Central Building A1",
+          "url": "https://flatnama.com/pune/p52100031886-venkatesh-erandwane-central-building-a1/"
+        }
+      ],
+      "image_urls_metadata_only": [
+        "https://flatnama.com/pune/p52100055029-venkatesh-erandwane-central-building-a2-phase-3/share.png"
+      ],
+      "source_notes": {
+        "source": "FlatNama",
+        "data_basis": "Structured fields shown on the page; figures may reflect developer-reported MahaRERA submissions and available registered-sale records.",
+        "price_statistic_definition": "FlatNama describes its project price as the rate at or below which 80% of flats sold in the stated period went; it is not an individual transaction price.",
+        "collection_scope": "Limited, rate-limited collection of supplied pages; not a copy of the whole website.",
+        "limitations": [
+          "A page may not show every transaction.",
+          "Construction/bookings data may be developer-reported and may be revised.",
+          "No individual transaction-level sale deeds are extracted by this parser.",
+          "Fields not confidently parsed remain null instead of being guessed."
+        ]
+      },
+      "extraction_quality": {
+        "parser_version": "0.4.0",
+        "fields_checked": 22,
+        "fields_present": 21,
+        "field_presence": {
+          "rera_number": true,
+          "developer": true,
+          "locality": true,
+          "pin_code": true,
+          "launch_date_text": true,
+          "possession_date_text": true,
+          "maharera_status": true,
+          "total_units": true,
+          "units_booked": true,
+          "booking_pct": true,
+          "building_count": true,
+          "land_acres": true,
+          "price_per_sqft_80pct": true,
+          "latest_sale_count": true,
+          "flat_type_mix": true,
+          "flat_sizes_sold_sqft": false,
+          "size_price_bands": true,
+          "sale_year_stats": true,
+          "progress_updates": true,
+          "comparables": true,
+          "comparison_summary": true,
+          "map_url": true
+        },
+        "annual_price_rows": 1,
+        "unit_mix_rows": 2,
+        "flat_sizes_sold_count": 0,
+        "size_price_band_rows": 2,
+        "construction_update_rows": 3,
+        "comparable_rows": 4,
+        "comparison_summary_rows": 6,
+        "warnings": [
+          "only_one_annual_price_row_extracted_check_source_layout"
+        ]
+      }
+    },
+    {
+      "project_url": "https://flatnama.com/pune/p52100066479-erandwane-business-zone/",
+      "page_title": "Erandwane Business Zone: RERA, Possession Date, Status",
+      "meta_description": "Erandwane Business Zone, Erandwane, Pune 411004 (MahaRERA P52100066479): most flats sold for ₹17,900 per sq ft or less (incl. balconies and terrace) in 2026.",
+      "project_name": "Erandwane Business Zone",
+      "rera_number": "P52100066479",
+      "developer": "Bhelke Dhone Infra",
+      "locality": "Erandwane",
+      "pin_code": "411004",
+      "maharera_status": "Active",
+      "construction_stage": null,
+      "launch_date_text": "June 2024",
+      "promised_timeline_text": "2 years 9 months promised",
+      "possession_date_text": "March 2027",
+      "original_possession_date_text": null,
+      "total_units": 91,
+      "units_for_sale": 91,
+      "units_booked": 19,
+      "not_for_sale_units": null,
+      "units_for_sale_derived_from_total_minus_not_for_sale": false,
+      "booking_status": "reported_count",
+      "booking_pct": 20.88,
+      "building_count": 2,
+      "land_acres": 0.5,
+      "excavation_pct": 100.0,
+      "rcc_pct": 100.0,
+      "finishing_pct": 0.0,
+      "complaint_count": 0,
+      "latest_sale_year": 2026,
+      "price_per_sqft_80pct": 17900.0,
+      "price_per_sqft_80pct_source": "annual_year_by_year",
+      "latest_sale_count": 10,
+      "headline_price_per_sqft_80pct": null,
+      "headline_price_year_label": null,
+      "headline_price_sale_count": null,
+      "headline_price_raw_text": null,
+      "recent_bookings_count": null,
+      "reported_booking_denominator": 91,
+      "booking_pct_displayed": 21.0,
+      "price_area_basis": "includes balconies and terrace",
+      "rate_vs_nearby_projects_pct": null,
+      "year_over_year_change_pct": 13.0,
+      "year_over_year_comparison_year": 2025,
+      "possession_extension_months": null,
+      "possession_extension_note": "Possession date extended",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=Erandwane+Business+Zone+Erandwane,+Pune+411004",
+      "flat_type_mix": [
+        {
+          "flat_type": "1 BHK",
+          "unit_count": 91
+        }
+      ],
+      "sale_year_stats": [
+        {
+          "sales_year": 2026,
+          "year_label": "2026 so far up 13% on 2025",
+          "price_per_sqft_80pct": 17900.0,
+          "sale_count": 10,
+          "raw_row": [
+            "2026 so far up 13% on 2025",
+            "₹17,900 per sq ft",
+            "10 sales"
+          ]
+        }
+      ],
+      "size_price_bands": [],
+      "flat_sizes_sold_sqft": [],
+      "market_context_snippets": [
+        "2 years 9 months promised",
+        "5 months away",
+        "Possession date unchanged since launch",
+        "up 13% on 2025",
+        "Since Dec 2025: booked 11 → 19",
+        "up 13% on 2025",
+        "Promised timeline (launch to possession)",
+        "Possession date extended",
+        "2 years 4 months of the promised 2 years 9 months have passed",
+        "Its registered possession date is March 2027, unchanged since launch. Construction, averaged across its 2 buildings: excavation complete, structure (RCC) complete, final finishes not started. MahaRERA records do not show it as ready to move in.",
+        "19 of 91 units are booked (21%). Since the December 2025 update, 8 more units have been booked. 80% of the flats sold here in 2026 so far went for ₹17,900 per sq ft or less (up 13% on 2025), counting balconies and terrace in the size, based on 10 registered sales we found. Buyers here paid a rate about 20% lower than at other Erandwane projects in 2026.",
+        "Prices in a project usually rise as construction progresses. Floor, view and flat size move the price up or down, so treat these figures as a guide."
+      ],
+      "progress_updates": [
+        {
+          "update_label": "Jul 2026",
+          "excavation_pct": 100.0,
+          "rcc_pct": 100.0,
+          "finishing_pct": 0.0,
+          "units_booked": 19,
+          "raw_row": [
+            "Jul 2026",
+            "100%",
+            "100%",
+            "0%",
+            "19"
+          ]
+        },
+        {
+          "update_label": "Dec 2025",
+          "excavation_pct": 100.0,
+          "rcc_pct": 100.0,
+          "finishing_pct": 0.0,
+          "units_booked": 11,
+          "raw_row": [
+            "Dec 2025",
+            "100%",
+            "100%",
+            "0%",
+            "11"
+          ]
+        },
+        {
+          "update_label": "Jun 2024",
+          "excavation_pct": 0.0,
+          "rcc_pct": 0.0,
+          "finishing_pct": 0.0,
+          "units_booked": null,
+          "raw_row": [
+            "Jun 2024",
+            "0%",
+            "0%",
+            "0%",
+            "—"
+          ]
+        }
+      ],
+      "comparables": [
+        {
+          "comparable_name": "Venkatesh Erandwane Central Building A2 Phase 3",
+          "launch_date_text": "February 2024",
+          "possession_date_text": "June 2027",
+          "rcc_pct": 60.0,
+          "booking_text": "57 of 104 units booked (55%)",
+          "raw_row": [
+            "Venkatesh Erandwane Central Building A2 Phase 3",
+            "February 2024",
+            "June 2027",
+            "60%",
+            "57 of 104 units booked (55%)"
+          ]
+        },
+        {
+          "comparable_name": "Chandrabhaga",
+          "launch_date_text": "October 2024",
+          "possession_date_text": "February 2028",
+          "rcc_pct": 15.0,
+          "booking_text": "16 of 31 units booked (52%)",
+          "raw_row": [
+            "Chandrabhaga",
+            "October 2024",
+            "February 2028",
+            "15%",
+            "16 of 31 units booked (52%)"
+          ]
+        },
+        {
+          "comparable_name": "Yashodhan Co-operative Housing Society",
+          "launch_date_text": "October 2024",
+          "possession_date_text": "March 2028",
+          "rcc_pct": 60.0,
+          "booking_text": "8 of 24 units booked (33%)",
+          "raw_row": [
+            "Yashodhan Co-operative Housing Society",
+            "October 2024",
+            "March 2028",
+            "60%",
+            "8 of 24 units booked (33%)"
+          ]
+        }
+      ],
+      "comparison_summary": [
+        {
+          "measure": "Promised timeline (launch to possession)",
+          "this_project": "2 yrs 9 mths",
+          "similar_projects": "3 yrs 4 mths",
+          "raw_row": [
+            "Promised timeline (launch to possession)",
+            "2 yrs 9 mths",
+            "3 yrs 4 mths"
+          ]
+        },
+        {
+          "measure": "Possession date extended",
+          "this_project": "No",
+          "similar_projects": "1 of 3",
+          "raw_row": [
+            "Possession date extended",
+            "No",
+            "1 of 3"
+          ]
+        },
+        {
+          "measure": "Possession date (MahaRERA)",
+          "this_project": "March 2027",
+          "similar_projects": "February 2028",
+          "raw_row": [
+            "Possession date (MahaRERA)",
+            "March 2027",
+            "February 2028"
+          ]
+        },
+        {
+          "measure": "Concrete structure (RCC) complete",
+          "this_project": "100%",
+          "similar_projects": "60%",
+          "raw_row": [
+            "Concrete structure (RCC) complete",
+            "100%",
+            "60%"
+          ]
+        },
+        {
+          "measure": "Share of units for sale that are booked",
+          "this_project": "21%",
+          "similar_projects": "52%",
+          "raw_row": [
+            "Share of units for sale that are booked",
+            "21%",
+            "52%"
+          ]
+        },
+        {
+          "measure": "Complaints on MahaRERA (filed by or against the builder)",
+          "this_project": "0",
+          "similar_projects": "1",
+          "raw_row": [
+            "Complaints on MahaRERA (filed by or against the builder)",
+            "0",
+            "1"
+          ]
+        }
+      ],
+      "related_project_links": [
+        {
+          "category": "comparable_project",
+          "label": "Venkatesh Erandwane Central Building A2 Phase 3",
+          "url": "https://flatnama.com/pune/p52100055029-venkatesh-erandwane-central-building-a2-phase-3/"
+        },
+        {
+          "category": "comparable_project",
+          "label": "Chandrabhaga",
+          "url": "https://flatnama.com/pune/p52100077614-chandrabhaga/"
+        },
+        {
+          "category": "comparable_project",
+          "label": "Yashodhan Co-operative Housing Society",
+          "url": "https://flatnama.com/pune/pm1260002400079-yashodhan-co-operative-housing-society/"
+        }
+      ],
+      "image_urls_metadata_only": [
+        "https://flatnama.com/pune/p52100066479-erandwane-business-zone/share.png"
+      ],
+      "source_notes": {
+        "source": "FlatNama",
+        "data_basis": "Structured fields shown on the page; figures may reflect developer-reported MahaRERA submissions and available registered-sale records.",
+        "price_statistic_definition": "FlatNama describes its project price as the rate at or below which 80% of flats sold in the stated period went; it is not an individual transaction price.",
+        "collection_scope": "Limited, rate-limited collection of supplied pages; not a copy of the whole website.",
+        "limitations": [
+          "A page may not show every transaction.",
+          "Construction/bookings data may be developer-reported and may be revised.",
+          "No individual transaction-level sale deeds are extracted by this parser.",
+          "Fields not confidently parsed remain null instead of being guessed."
+        ]
+      },
+      "extraction_quality": {
+        "parser_version": "0.4.0",
+        "fields_checked": 22,
+        "fields_present": 20,
+        "field_presence": {
+          "rera_number": true,
+          "developer": true,
+          "locality": true,
+          "pin_code": true,
+          "launch_date_text": true,
+          "possession_date_text": true,
+          "maharera_status": true,
+          "total_units": true,
+          "units_booked": true,
+          "booking_pct": true,
+          "building_count": true,
+          "land_acres": true,
+          "price_per_sqft_80pct": true,
+          "latest_sale_count": true,
+          "flat_type_mix": true,
+          "flat_sizes_sold_sqft": false,
+          "size_price_bands": false,
+          "sale_year_stats": true,
+          "progress_updates": true,
+          "comparables": true,
+          "comparison_summary": true,
+          "map_url": true
+        },
+        "annual_price_rows": 1,
+        "unit_mix_rows": 1,
+        "flat_sizes_sold_count": 0,
+        "size_price_band_rows": 0,
+        "construction_update_rows": 3,
+        "comparable_rows": 3,
+        "comparison_summary_rows": 6,
+        "warnings": [
+          "only_one_annual_price_row_extracted_check_source_layout"
+        ]
+      }
+    },
+    {
+      "project_url": "https://flatnama.com/pune/p52100033449-chintamani-capital-and-vinay-residency/",
+      "page_title": "Chintamani Capital & Vinay Residency: Possession Date & RERA",
+      "meta_description": "Chintamani Capital & Vinay Residency, Erandwane, Pune 411004 (MahaRERA P52100033449): possession date December 2027, structure 25% complete.",
+      "project_name": "Chintamani Capital & Vinay Residency, Erandwane",
+      "rera_number": "P52100033449",
+      "developer": "M/S VARAD VINAYAK DEVELOPERS",
+      "locality": "Erandwane",
+      "pin_code": "411004",
+      "maharera_status": "Active",
+      "construction_stage": null,
+      "launch_date_text": "February 2022",
+      "promised_timeline_text": null,
+      "possession_date_text": "December 2027",
+      "original_possession_date_text": "May 2025",
+      "total_units": 80,
+      "units_for_sale": 18,
+      "units_booked": 18,
+      "not_for_sale_units": null,
+      "units_for_sale_derived_from_total_minus_not_for_sale": false,
+      "booking_status": "all_booked",
+      "booking_pct": 100.0,
+      "building_count": 2,
+      "land_acres": 0.4,
+      "excavation_pct": 100.0,
+      "rcc_pct": 25.0,
+      "finishing_pct": 0.0,
+      "complaint_count": 0,
+      "latest_sale_year": null,
+      "price_per_sqft_80pct": null,
+      "price_per_sqft_80pct_source": null,
+      "latest_sale_count": null,
+      "headline_price_per_sqft_80pct": null,
+      "headline_price_year_label": null,
+      "headline_price_sale_count": null,
+      "headline_price_raw_text": null,
+      "recent_bookings_count": null,
+      "reported_booking_denominator": 20,
+      "booking_pct_displayed": null,
+      "price_area_basis": null,
+      "rate_vs_nearby_projects_pct": null,
+      "year_over_year_change_pct": null,
+      "year_over_year_comparison_year": null,
+      "possession_extension_months": null,
+      "possession_extension_note": "Possession date extended",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=Chintamani+Capital+and+Vinay+Residency+Erandwane,+Pune+411004",
+      "flat_type_mix": [
+        {
+          "flat_type": "1 RK",
+          "unit_count": 2
+        },
+        {
+          "flat_type": "2 BHK",
+          "unit_count": 15
+        },
+        {
+          "flat_type": "3 BHK",
+          "unit_count": 14
+        },
+        {
+          "flat_type": "4 BHK",
+          "unit_count": 1
+        }
+      ],
+      "sale_year_stats": [],
+      "size_price_bands": [],
+      "flat_sizes_sold_sqft": [],
+      "market_context_snippets": [
+        "3 years 3 months originally promised",
+        "1 year 2 months away",
+        "Extended by 2 years 7 months (originally May 2025)",
+        "Bookings not reported",
+        "Since Dec 2025: structure 13% → 25%",
+        "Promised timeline (launch to possession)",
+        "Possession date extended",
+        "Bookings not reported",
+        "All of the originally promised 3 years 3 months have passed",
+        "Its registered possession date is December 2027, extended by 2 years 7 months from the original May 2025. Construction, averaged across its 2 buildings: excavation complete, structure (RCC) 25% complete, final finishes not started. MahaRERA records do not show it as ready to move in.",
+        "It has not reported any bookings to MahaRERA yet. Since the December 2025 update, the reported concrete structure (RCC) has gone from 13% to 25%.",
+        "Prices in a project usually rise as construction progresses. Floor, view and flat size move the price up or down, so treat these figures as a guide."
+      ],
+      "progress_updates": [
+        {
+          "update_label": "Jul 2026",
+          "excavation_pct": 100.0,
+          "rcc_pct": 25.0,
+          "finishing_pct": 0.0,
+          "units_booked": null,
+          "raw_row": [
+            "Jul 2026",
+            "100%",
+            "25%",
+            "0%",
+            "—"
+          ]
+        },
+        {
+          "update_label": "Dec 2025",
+          "excavation_pct": 100.0,
+          "rcc_pct": 13.0,
+          "finishing_pct": 0.0,
+          "units_booked": null,
+          "raw_row": [
+            "Dec 2025",
+            "100%",
+            "13%",
+            "0%",
+            "—"
+          ]
+        },
+        {
+          "update_label": "Jun 2024",
+          "excavation_pct": 50.0,
+          "rcc_pct": 13.0,
+          "finishing_pct": 0.0,
+          "units_booked": null,
+          "raw_row": [
+            "Jun 2024",
+            "50%",
+            "13%",
+            "0%",
+            "—"
+          ]
+        },
+        {
+          "update_label": "Dec 2023",
+          "excavation_pct": 0.0,
+          "rcc_pct": 0.0,
+          "finishing_pct": 0.0,
+          "units_booked": null,
+          "raw_row": [
+            "Dec 2023",
+            "0%",
+            "0%",
+            "0%",
+            "—"
+          ]
+        }
+      ],
+      "comparables": [
+        {
+          "comparable_name": "Malhar",
+          "launch_date_text": "February 2022",
+          "possession_date_text": "September 2024",
+          "rcc_pct": 8.0,
+          "booking_text": "All units for sale are booked (15 booked)",
+          "raw_row": [
+            "Malhar",
+            "February 2022",
+            "September 2024",
+            "8%",
+            "All units for sale are booked (15 booked)"
+          ]
+        },
+        {
+          "comparable_name": "100 Prabhat",
+          "launch_date_text": "February 2022",
+          "possession_date_text": "December 2025",
+          "rcc_pct": 100.0,
+          "booking_text": "18 of 20 units booked (90%)",
+          "raw_row": [
+            "100 Prabhat",
+            "February 2022",
+            "December 2025",
+            "100%",
+            "18 of 20 units booked (90%)"
+          ]
+        },
+        {
+          "comparable_name": "Radha Anand Co-operative Housing Society",
+          "launch_date_text": "April 2022",
+          "possession_date_text": "December 2027",
+          "rcc_pct": 0.0,
+          "booking_text": "Bookings not reported",
+          "raw_row": [
+            "Radha Anand Co-operative Housing Society",
+            "April 2022",
+            "December 2027",
+            "0%",
+            "Bookings not reported"
+          ]
+        },
+        {
+          "comparable_name": "Parisar Apartment",
+          "launch_date_text": "May 2022",
+          "possession_date_text": "December 2026",
+          "rcc_pct": 100.0,
+          "booking_text": "18 of 34 units booked (53%)",
+          "raw_row": [
+            "Parisar Apartment",
+            "May 2022",
+            "December 2026",
+            "100%",
+            "18 of 34 units booked (53%)"
+          ]
+        },
+        {
+          "comparable_name": "Ashiyana",
+          "launch_date_text": "July 2021",
+          "possession_date_text": "December 2026",
+          "rcc_pct": 100.0,
+          "booking_text": "21 of 51 units booked (41%)",
+          "raw_row": [
+            "Ashiyana",
+            "July 2021",
+            "December 2026",
+            "100%",
+            "21 of 51 units booked (41%)"
+          ]
+        }
+      ],
+      "comparison_summary": [
+        {
+          "measure": "Promised timeline (launch to possession)",
+          "this_project": "3 yrs 3 mths",
+          "similar_projects": "3 yrs 10 mths",
+          "raw_row": [
+            "Promised timeline (launch to possession)",
+            "3 yrs 3 mths",
+            "3 yrs 10 mths"
+          ]
+        },
+        {
+          "measure": "Possession date extended",
+          "this_project": "By 2 years 7 months",
+          "similar_projects": "2 of 5",
+          "raw_row": [
+            "Possession date extended",
+            "By 2 years 7 months",
+            "2 of 5"
+          ]
+        },
+        {
+          "measure": "Possession date (MahaRERA)",
+          "this_project": "December 2027",
+          "similar_projects": "December 2026",
+          "raw_row": [
+            "Possession date (MahaRERA)",
+            "December 2027",
+            "December 2026"
+          ]
+        },
+        {
+          "measure": "Concrete structure (RCC) complete",
+          "this_project": "25%",
+          "similar_projects": "100%",
+          "raw_row": [
+            "Concrete structure (RCC) complete",
+            "25%",
+            "100%"
+          ]
+        },
+        {
+          "measure": "Complaints on MahaRERA (filed by or against the builder)",
+          "this_project": "0",
+          "similar_projects": "0",
+          "raw_row": [
+            "Complaints on MahaRERA (filed by or against the builder)",
+            "0",
+            "0"
+          ]
+        }
+      ],
+      "related_project_links": [
+        {
+          "category": "comparable_project",
+          "label": "Malhar",
+          "url": "https://flatnama.com/pune/p52100032854-malhar/"
+        },
+        {
+          "category": "comparable_project",
+          "label": "100 Prabhat",
+          "url": "https://flatnama.com/pune/p52100033089-100-prabhat/"
+        },
+        {
+          "category": "comparable_project",
+          "label": "Radha Anand Co-operative Housing Society",
+          "url": "https://flatnama.com/pune/p52100035043-radha-anand-co-operative-housing-society/"
+        },
+        {
+          "category": "comparable_project",
+          "label": "Parisar Apartment",
+          "url": "https://flatnama.com/pune/p52100035108-parisar-apartment/"
+        },
+        {
+          "category": "comparable_project",
+          "label": "Ashiyana",
+          "url": "https://flatnama.com/pune/p52100029929-ashiyana/"
+        }
+      ],
+      "image_urls_metadata_only": [
+        "https://flatnama.com/pune/p52100033449-chintamani-capital-and-vinay-residency/share.png"
+      ],
+      "source_notes": {
+        "source": "FlatNama",
+        "data_basis": "Structured fields shown on the page; figures may reflect developer-reported MahaRERA submissions and available registered-sale records.",
+        "price_statistic_definition": "FlatNama describes its project price as the rate at or below which 80% of flats sold in the stated period went; it is not an individual transaction price.",
+        "collection_scope": "Limited, rate-limited collection of supplied pages; not a copy of the whole website.",
+        "limitations": [
+          "A page may not show every transaction.",
+          "Construction/bookings data may be developer-reported and may be revised.",
+          "No individual transaction-level sale deeds are extracted by this parser.",
+          "Fields not confidently parsed remain null instead of being guessed."
+        ]
+      },
+      "extraction_quality": {
+        "parser_version": "0.4.0",
+        "fields_checked": 22,
+        "fields_present": 17,
+        "field_presence": {
+          "rera_number": true,
+          "developer": true,
+          "locality": true,
+          "pin_code": true,
+          "launch_date_text": true,
+          "possession_date_text": true,
+          "maharera_status": true,
+          "total_units": true,
+          "units_booked": true,
+          "booking_pct": true,
+          "building_count": true,
+          "land_acres": true,
+          "price_per_sqft_80pct": false,
+          "latest_sale_count": false,
+          "flat_type_mix": true,
+          "flat_sizes_sold_sqft": false,
+          "size_price_bands": false,
+          "sale_year_stats": false,
+          "progress_updates": true,
+          "comparables": true,
+          "comparison_summary": true,
+          "map_url": true
+        },
+        "annual_price_rows": 0,
+        "unit_mix_rows": 4,
+        "flat_sizes_sold_count": 0,
+        "size_price_band_rows": 0,
+        "construction_update_rows": 4,
+        "comparable_rows": 5,
+        "comparison_summary_rows": 5,
+        "warnings": []
+      }
+    },
+    {
+      "project_url": "https://flatnama.com/pune/p52100034858-parkside/",
+      "page_title": "Parkside, Erandwane: RERA, Possession Date, Status",
+      "meta_description": "Parkside, Erandwane, Pune 411004 (MahaRERA P52100034858): possession date December 2026, structure 50% complete. No paid listings, no sign-up, no calls.",
+      "project_name": "Parkside, Erandwane",
+      "rera_number": "P52100034858",
+      "developer": "SAPP VENTURES",
+      "locality": "Erandwane",
+      "pin_code": "411004",
+      "maharera_status": "Active",
+      "construction_stage": null,
+      "launch_date_text": "April 2022",
+      "promised_timeline_text": "4 years 8 months promised",
+      "possession_date_text": "December 2026",
+      "original_possession_date_text": null,
+      "total_units": 66,
+      "units_for_sale": 66,
+      "units_booked": 19,
+      "not_for_sale_units": null,
+      "units_for_sale_derived_from_total_minus_not_for_sale": false,
+      "booking_status": "reported_count",
+      "booking_pct": 28.79,
+      "building_count": 66,
+      "land_acres": 0.8,
+      "excavation_pct": 100.0,
+      "rcc_pct": 50.0,
+      "finishing_pct": 0.0,
+      "complaint_count": 0,
+      "latest_sale_year": null,
+      "price_per_sqft_80pct": null,
+      "price_per_sqft_80pct_source": null,
+      "latest_sale_count": null,
+      "headline_price_per_sqft_80pct": null,
+      "headline_price_year_label": null,
+      "headline_price_sale_count": null,
+      "headline_price_raw_text": null,
+      "recent_bookings_count": null,
+      "reported_booking_denominator": 66,
+      "booking_pct_displayed": 29.0,
+      "price_area_basis": null,
+      "rate_vs_nearby_projects_pct": null,
+      "year_over_year_change_pct": null,
+      "year_over_year_comparison_year": null,
+      "possession_extension_months": null,
+      "possession_extension_note": null,
+      "map_url": "https://www.google.com/maps/search/?api=1&query=Parkside+Erandwane,+Pune+411004",
+      "flat_type_mix": [
+        {
+          "flat_type": "3 BHK",
+          "unit_count": 43
+        },
+        {
+          "flat_type": "4 BHK",
+          "unit_count": 23
+        }
+      ],
+      "sale_year_stats": [],
+      "size_price_bands": [],
+      "flat_sizes_sold_sqft": [],
+      "market_context_snippets": [
+        "4 years 8 months promised",
+        "2 months away",
+        "Possession date unchanged since launch",
+        "4 years 6 months of the promised 4 years 8 months have passed",
+        "Its registered possession date is December 2026, unchanged since launch. Construction: excavation complete, structure (RCC) 50% complete, final finishes not started. MahaRERA records do not show it as ready to move in.",
+        "Prices in a project usually rise as construction progresses. Floor, view and flat size move the price up or down, so treat these figures as a guide."
+      ],
+      "progress_updates": [
+        {
+          "update_label": "Dec 2024",
+          "excavation_pct": 100.0,
+          "rcc_pct": 50.0,
+          "finishing_pct": 0.0,
+          "units_booked": 19,
+          "raw_row": [
+            "Dec 2024",
+            "100%",
+            "50%",
+            "0%",
+            "19"
+          ]
+        },
+        {
+          "update_label": "Jun 2024",
+          "excavation_pct": 100.0,
+          "rcc_pct": 20.0,
+          "finishing_pct": 0.0,
+          "units_booked": null,
+          "raw_row": [
+            "Jun 2024",
+            "100%",
+            "20%",
+            "0%",
+            "—"
+          ]
+        },
+        {
+          "update_label": "Dec 2023",
+          "excavation_pct": 0.0,
+          "rcc_pct": 0.0,
+          "finishing_pct": 0.0,
+          "units_booked": null,
+          "raw_row": [
+            "Dec 2023",
+            "0%",
+            "0%",
+            "0%",
+            "—"
+          ]
+        }
+      ],
+      "comparables": [],
+      "comparison_summary": [],
+      "related_project_links": [],
+      "image_urls_metadata_only": [
+        "https://flatnama.com/pune/p52100034858-parkside/share.png"
+      ],
+      "source_notes": {
+        "source": "FlatNama",
+        "data_basis": "Structured fields shown on the page; figures may reflect developer-reported MahaRERA submissions and available registered-sale records.",
+        "price_statistic_definition": "FlatNama describes its project price as the rate at or below which 80% of flats sold in the stated period went; it is not an individual transaction price.",
+        "collection_scope": "Limited, rate-limited collection of supplied pages; not a copy of the whole website.",
+        "limitations": [
+          "A page may not show every transaction.",
+          "Construction/bookings data may be developer-reported and may be revised.",
+          "No individual transaction-level sale deeds are extracted by this parser.",
+          "Fields not confidently parsed remain null instead of being guessed."
+        ]
+      },
+      "extraction_quality": {
+        "parser_version": "0.4.0",
+        "fields_checked": 22,
+        "fields_present": 15,
+        "field_presence": {
+          "rera_number": true,
+          "developer": true,
+          "locality": true,
+          "pin_code": true,
+          "launch_date_text": true,
+          "possession_date_text": true,
+          "maharera_status": true,
+          "total_units": true,
+          "units_booked": true,
+          "booking_pct": true,
+          "building_count": true,
+          "land_acres": true,
+          "price_per_sqft_80pct": false,
+          "latest_sale_count": false,
+          "flat_type_mix": true,
+          "flat_sizes_sold_sqft": false,
+          "size_price_bands": false,
+          "sale_year_stats": false,
+          "progress_updates": true,
+          "comparables": false,
+          "comparison_summary": false,
+          "map_url": true
+        },
+        "annual_price_rows": 0,
+        "unit_mix_rows": 2,
+        "flat_sizes_sold_count": 0,
+        "size_price_band_rows": 0,
+        "construction_update_rows": 3,
+        "comparable_rows": 0,
+        "comparison_summary_rows": 0,
+        "warnings": []
+      }
+    }
+  ]
+}
