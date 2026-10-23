@@ -1,5 +1,22 @@
+# Environment & secrets
 .env
+
+# Virtual environment
 .venv/
+venv/
+ENV/
+
+# Python bytecode and caches
 __pycache__/
-*.pyc
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# OS-generated files
 .DS_Store
+Thumbs.db
+
+# Generated data exports (reproduced on-demand via: python export_data.py)
+exports/*.csv
+!exports/.gitkeep
